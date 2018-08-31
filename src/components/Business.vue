@@ -74,6 +74,7 @@ export default {
   },
   methods: {
     clearForm () {
+      this.zipNotFound = false
       this.userZip = ''
       this.showForm = true
       this.$nextTick(() => this.$refs.zipinput.focus())
