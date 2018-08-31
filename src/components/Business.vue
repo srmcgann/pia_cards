@@ -7,14 +7,15 @@
         <button class="enterZipButton">Go</button>
       </form>
     </div>
-    <div v-else-if="businessesFound.length === 0" class="resultsDiv">
+    <div v-else-if="businessesFound.length === 0 && !zipNotFound" class="resultsDiv">
       <br><br>
       Searching {{businessCount}} businesses for the closest to you...<br><br>
       This might take a moment.<br>
       <img src="../assets/hourglass.gif">
     </div>
     <div v-else-if="zipNotFound">
-      sorry charlie
+      <div class="sorryCharlie">That zip wasn't found in our database.</div>
+      <button @click="clearForm()" class="button">Search Again</button><br><br>
     </div>
     <div v-else class="resultsDiv">
       <button @click="clearForm()" class="button">Search Again</button><br><br>
@@ -202,6 +203,10 @@ button:focus {
   padding-left: 15px;
   padding-right: 15px;
   border-radius: 10px;
+}
+.sorryCharlie {
+  font-size: 24px;
+  margin: 40px;
 }
 .zipInput {
   margin-top: 20px;
