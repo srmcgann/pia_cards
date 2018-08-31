@@ -4,11 +4,7 @@
   error_reporting(E_ALL);
 
   $host = 'localhost';
-<<<<<<< HEAD
   $user = 'pia_user';
-=======
-  $user = 'user';
->>>>>>> 654eb7836f78167e5253d72093b2763a9d105ab1
   $pass = 'pia57253';
   $db = 'pia_cards';
   $link = mysqli_connect($host, $user, $pass, $db);
