@@ -14,9 +14,6 @@
       <tab name="Register Your Business">
         <Apply/>
       </tab>
-      <tab name="Contact Us">
-        <Contact/>
-      </tab>
     </tabs>
   </div>
 </template>
@@ -24,7 +21,6 @@
 <script>
 import Cards from './Cards'
 import Business from './Business'
-import Contact from './Contact'
 import Apply from './Apply'
 
 export default {
@@ -32,7 +28,6 @@ export default {
   components: {
     Cards,
     Business,
-    Contact,
     Apply
   },
   data () {
