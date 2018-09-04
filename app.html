@@ -1,0 +1,2887 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"7579c0c6e8","applicationID":"6827321","transactionName":"JVcNEkVbXFRVSxxSFh8XCwlaUQ==","queueTime":0,"applicationTime":144,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+    <title>Private Internet Access | Anonymous VPN Service Provider</title>
+    <link rel="apple-touch-icon" href="https://www.privateinternetaccess.com/assets/apple-touch-icon-b55a0cff11a717c9b39c21c4fddb5b29e01e0d80f8502c74f6ee37755add9827.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://www.privateinternetaccess.com/assets/apple-touch-icon-114x114-dbd99960150201ca989e0cb86b715d723d24d8e5ef16f1ba0d86e4988b7289d4.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://www.privateinternetaccess.com/assets/apple-touch-icon-60x60-40444ea401e9610a7a9bc708e3e3c9c1e20df88fc392d8b81387fb615f852ef5.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://www.privateinternetaccess.com/assets/apple-touch-icon-120x120-08d7c6c79279221c21b062933fd3d2a90cfdd47628c155dffbdc30c4b9e9f7eb.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://www.privateinternetaccess.com/assets/apple-touch-icon-72x72-577c2d94cb44f355987f945581355b615ae131b34e60a154732cfa1b97bea746.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://www.privateinternetaccess.com/assets/apple-touch-icon-144x144-e13639295a0fe399cfa08d757ec89557c2f4e02f85f65c05c66362f99fac3216.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://www.privateinternetaccess.com/assets/apple-touch-icon-76x76-bf8bdba152c015ea656a38f3cf1c4db0fdc816034e730752916333d2974e140c.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://www.privateinternetaccess.com/assets/apple-touch-icon-152x152-47beee8c2297a4ff0af9e1bfdd2749aed441e65393896ef86ebf5e150ddbde7d.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.privateinternetaccess.com/assets/apple-touch-icon-180x180-b55a0cff11a717c9b39c21c4fddb5b29e01e0d80f8502c74f6ee37755add9827.png">
+<link rel="apple-touch-icon" sizes="57x57" href="https://www.privateinternetaccess.com/assets/apple-touch-icon-57x57-5a18bdb570da7ba81b6d2e1ff2590ec62033e8c786a36e587eab94365710c252.png">
+<link rel="apple-touch-icon-precomposed" href="https://www.privateinternetaccess.com/assets/apple-touch-icon-precomposed-3a1219e49f9d439f6f17c33fbc89d763a1d8c905ea367412060e5c7cbc54611f.png">
+<meta name="msapplication-config" content="none">
+
+    <meta name="description" content="High-speed anonymous VPN Service from Private Internet Access. Protect yourself with our secure VPN tunnel. Packages starting at $2.91/mo. Register today." >
+    <meta name="google-site-verification" content="fxZecqCeR-c8yqnUE4JJCsMOa_Cn5WuK9t6CaHBt_Sw" />
+    <meta name="robots" content="INDEX,FOLLOW">
+    <link rel="canonical" href="https://www.privateinternetaccess.com">    <link rel="alternate" href="https://www.privateinternetaccess.com" hreflang="en">
+<link rel="alternate" href="https://dnk.privateinternetaccess.com" hreflang="da">
+<link rel="alternate" href="https://bra.privateinternetaccess.com" hreflang="pt-br">
+<link rel="alternate" href="https://nld.privateinternetaccess.com" hreflang="nl">
+<link rel="alternate" href="https://fra.privateinternetaccess.com" hreflang="fr">
+<link rel="alternate" href="https://deu.privateinternetaccess.com" hreflang="de">
+<link rel="alternate" href="https://ita.privateinternetaccess.com" hreflang="it">
+<link rel="alternate" href="https://jpn.privateinternetaccess.com" hreflang="ja">
+<link rel="alternate" href="https://rus.privateinternetaccess.com" hreflang="ru">
+<link rel="alternate" href="https://mex.privateinternetaccess.com" hreflang="es-mx">
+<link rel="alternate" href="https://tur.privateinternetaccess.com" hreflang="tr">
+<link rel="alternate" href="https://tha.privateinternetaccess.com" hreflang="th">
+<link rel="alternate" href="https://kor.privateinternetaccess.com" hreflang="ko">
+<link rel="alternate" href="https://ara.privateinternetaccess.com" hreflang="ar">
+<link rel="alternate" href="https://chi.privateinternetaccess.com" hreflang="zh-CN">
+<link rel="alternate" href="https://cht.privateinternetaccess.com" hreflang="zh-TW">
+<link rel="alternate" href="https://pol.privateinternetaccess.com" hreflang="pl">
+<link rel="alternate" href="https://nor.privateinternetaccess.com" hreflang="no">
+<link rel="alternate" href="https://www.privateinternetaccess.com" hreflang="x-default">      <!-- JSON-LD markup generated by Google Structured Data Markup Helper. -->
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "SoftwareApplication",
+  "name" : "Private Internet Access®",
+  "image" : "https://www.privateinternetaccess.com/assets/vpn_tunnel_service-1051d51cea8f528781cf1686e61af48a385ac636f76024e518c8bcf9251d5922.png",
+  "url" : "https://www.privateinternetaccess.com/",
+  "author" : {
+    "@type" : "Person",
+    "name" : "Private Internet Access"
+  },
+  "datePublished" : "2010-08-10",
+  "publisher" : {
+    "@type" : "Organization",
+    "name" : "Private Internet Access"
+  },
+  "applicationCategory" : "VPN Service",
+  "downloadUrl" : [ "", "https://www.privateinternetaccess.com/pages/buy-vpn/" ],
+  "operatingSystem" : "OpenVPN, PPTP & IPSEC/L2TP",
+  "screenshot" : "https://www.privateinternetaccess.com/assets/vpn_service-f1b6731f2195122155a2f78542af79c44ead04736d1ca7a01a8e87435df81f19.png",
+  "review" : {
+    "@type" : "Review",
+    "reviewBody" : "“Very fast. Signed up for a month and changed to a year"
+  }
+}
+</script>
+
+  <meta http-equiv="content-language" content="en-us"/>
+      <link rel="stylesheet" media="screen" href="https://www.privateinternetaccess.com/assets/trustpilot_widget-a5dca885a7866c68477fedc59903ce5d61f5a1941263de494e4323f4cc2d13cc.css" />
+  <link rel="shortcut icon" href="https://www.privateinternetaccess.com/favicon.ico" >
+  <link rel="stylesheet" href="https://www.privateinternetaccess.com/assets/application/application-98c2473d78ac74c85932461fb0eff4a2670d87bbb270f9357087b9cdfbbaa3d5.css" />
+    <meta name="copyright" content="Copyright (c) 2010 London Trust Media, Inc." >
+  <meta name="author" content="London Trust Media, Inc." >
+  <meta name="distribution" content="Global" >
+  <meta name="rating" content="General" >
+  <meta name="expires" content="Never" >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="FxIuNgKz3W043ZRt02oXnX1Pr_kiJ_nVfo4_AywDr2A" >
+  <meta name="msvalidate.01" content="850A277FE771818CC7899A343AD33CF8" />
+  <meta name="DC.title" content="Private Internet Access Anonymous VPN" />
+  <meta name="geo.region" content="US-MI" />
+  <meta name="geo.placename" content="Grandville" />
+  <meta name="geo.position" content="42.91272;-85.75508" />
+  <meta name="ICBM" content="42.91272, -85.75508" />
+    <!--[if lt IE 8]>
+<style type='text/css'>
+  div#content div.padded h3 {
+    margin-top: 5px;
+  }
+
+  div#content div.grey ul li {
+    margin-left: 34px;
+    height: 100%;
+  }
+
+  div#content {
+    margin-top: 10px;
+  }
+
+  div#content h1 {
+    font-size: 2.0em;
+  }
+
+  div#content h2 {
+    font-size: 1.6em;
+  }
+
+  div#content h3 {
+    font-size: 1.2em;
+  }
+
+  div#content div.map_front_holder div.map_front_right ul {
+    list-style-type: none;
+    margin: 0px;
+    margin-left: 10px;
+    font-size: 1.0em;
+  }
+
+  div#content div.cancel {
+    float: right;
+  }
+
+  div.affil_right ul li {
+    margin-left: 40px;
+
+  }
+
+  div#nav_container {
+  }
+
+  div#h1hold {
+    position: absolute;
+    z-index: 10000000000;
+  }
+
+  div#navigation b.hovered {
+  }
+
+  h1.bb {
+    margin-top: 10px;
+    display: block;
+  }
+
+  div.splash_holder {
+    margin-top: 10px;
+  }
+</style>
+<![endif]-->
+
+<!--[if IE 8]>
+<style>
+  img {
+    border: none !important;
+  }
+  .list--three-columns > li {
+    display: block;
+    float: left;
+    width: 33.3%;
+  }
+
+  .welcome_video {
+    display: block;
+  }
+  .welcome_video img {
+    max-width: 100%;
+    width: 100%;
+  }
+</style>
+<![endif]-->
+
+  <script>
+  <!-- Google Tag Manager -->
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N2GKQF5');
+  <!-- End Google Tag Manager -->
+  </script>
+  <script>
+  <!-- Google Analytics -->
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m);
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  var params = window.location.search.replace(new RegExp("&?(buyerEmail|buyerName|email|q|address_or_email)=.*&?"),'')
+  var page = window.location.pathname + params
+  ga('create', 'UA-26585402-1', 'auto')
+  ga('require', 'linkid', 'linkid.js')
+  ga('set', 'anonymizeIP', true)
+  ga('set', 'location', page)
+  ga('set', 'dimension3', Math.floor(Date.now() / 1000))
+  ga('send', 'pageview')
+  <!-- End Google Analytics -->
+  </script>
+
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="CMiq5lcQ49q1KIGQ8I0yikHq/XTEsV7mmzwe8PjzXZbH9wFCBp3i0nwKj6hwMgjVNHlDSr8KsmZoVWOgLWZ/iw==" />
+      <style>
+    .form-row {
+      font-size: 10pt
+    }
+
+    .pricingfineprint {
+      font-size: 13px;
+      line-height: 27px;
+      color: #753303;
+      padding-top:0px;
+      text-align: center;
+    }
+    .trustpilot {
+      padding-top:15px;
+    }
+
+    @media (max-width: 767px) {
+      .trustpilot {
+        padding-top:30px;
+      }
+    }
+  </style>
+
+    
+  </head>
+  <body class="buy home">
+
+
+      
+<nav id="myNavmenu" class="navmenu navmenu-default navmenu-pia navmenu-fixed-left offcanvas" role="navigation">
+  <a href="https://www.privateinternetaccess.com" title="Private Internet Access Home Page" class="navmenu-brand">
+    <img src='https://www.privateinternetaccess.com/assets/PIALogo1x-w-c04847e27cfb0595209f83a7a982f1c404c39072ce0762a0c49ce8c5ad16382f.png' alt='Private Internet Access Logo' width='209' height='28' class='img-responsive center-block' title='Go to the Private Internet Access home page.' srcset='https://www.privateinternetaccess.com/assets/PIALogo1x-w-c04847e27cfb0595209f83a7a982f1c404c39072ce0762a0c49ce8c5ad16382f.png 1x, https://www.privateinternetaccess.com/assets/PIALogo2x-w-b8337d6b5bb4d0a88f3d9c31cdd3c298e9739d124e202c4eb14ffd56bedd3e06.png 2x' style='height: inherit !important;'>  </a>
+  <ul class="nav navmenu-nav">
+
+    <li class=''>
+  <a href="https://www.privateinternetaccess.com/pages/how-it-works/" title="How It Works">How It Works</a>
+</li>
+<li class=''>
+  <a href="https://www.privateinternetaccess.com/pages/network/" title="Network">Network</a>
+</li>
+<li class=''>
+  <a href="https://www.privateinternetaccess.com/pages/download" title="Download">Download</a>
+</li>
+<li>
+  <a href="https://www.privateinternetaccess.com/helpdesk/" rel="noopener nofollow" title="Support">Support</a>
+</li>
+<li class=''>
+  <a href="https://www.privateinternetaccess.com/blog" title="Blog">Blog</a>
+</li>
+<li class=''>
+  <a href="https://www.privateinternetaccess.com/pages/business-vpn" title="Business VPN">Business VPN</a>
+</li>
+<li class=''>
+  <a href="https://www.privateinternetaccess.com/pages/client-control-panel" title="My Account">My Account</a>
+</li>
+
+    <li class="dropdown">
+      <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" class="topbar__link--text dropdown-toggle">
+        English&nbsp;<span class="caret" style="border-top-color: #fff; border-bottom-color: #fff;"></span>
+      </a>
+      <ul class="dropdown-menu language-dropdown" aria-labelledby="dropdownMenu1">
+        <li><a style='display: block;' title='English' href='https://www.privateinternetaccess.com'>English</a></li><li><a style='display: block;' title='Dansk' href='https://dnk.privateinternetaccess.com'>Dansk</a></li><li><a style='display: block;' title='Português (Brasil)' href='https://bra.privateinternetaccess.com'>Português (Brasil)</a></li><li><a style='display: block;' title='Nederlands' href='https://nld.privateinternetaccess.com'>Nederlands</a></li><li><a style='display: block;' title='Français' href='https://fra.privateinternetaccess.com'>Français</a></li><li><a style='display: block;' title='Deutsch' href='https://deu.privateinternetaccess.com'>Deutsch</a></li><li><a style='display: block;' title='Italiano' href='https://ita.privateinternetaccess.com'>Italiano</a></li><li><a style='display: block;' title='日本語' href='https://jpn.privateinternetaccess.com'>日本語</a></li><li><a style='display: block;' title='Русский' href='https://rus.privateinternetaccess.com'>Русский</a></li><li><a style='display: block;' title='Español (México)' href='https://mex.privateinternetaccess.com'>Español (México)</a></li><li><a style='display: block;' title='Türkçe' href='https://tur.privateinternetaccess.com'>Türkçe</a></li><li><a style='display: block;' title='ไทย' href='https://tha.privateinternetaccess.com'>ไทย</a></li><li><a style='display: block;' title='한국어' href='https://kor.privateinternetaccess.com'>한국어</a></li><li><a style='display: block;' title='العربية' href='https://ara.privateinternetaccess.com'>العربية</a></li><li><a style='display: block;' title='简体中文' href='https://chi.privateinternetaccess.com'>简体中文</a></li><li><a style='display: block;' title='繁體中文' href='https://cht.privateinternetaccess.com'>繁體中文</a></li><li><a style='display: block;' title='Polski' href='https://pol.privateinternetaccess.com'>Polski</a></li><li><a style='display: block;' title='Norsk' href='https://nor.privateinternetaccess.com'>Norsk</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<div class="navbar-pia-wrapper">
+  <noscript><div style="width:100%; max-height:70px; position:fixed; bottom:0px; left:0px;background: #F4A800; color:#000; padding:10px 20px; text-align:center;"><b>Javascript is disabled in your browser.</b> Some features of the site may not work as intended.</div></noscript>
+
+  <div class="top-wrapper">
+    <div class="topbar">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-8 col-sm-12">
+            <ul class="topbar__list topbar__list--marker
+             not-secured
+            ">
+              <li class="topbar__item topbar__item-ip">Your IP Address: 174.214.17.198</li>
+              <li class="topbar__item topbar__item-ip nodot">Your ISP:  Verizon Wireless</li>
+                <li class="topbar__item">You are not protected</li>
+              <li class="topbar__item">
+                <a class="topbar__link--more" href="/pages/whats-my-ip/" title="Learn More">
+                  Learn More&nbsp;»
+                </a>
+                </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-4 hidden-sm hidden-xs topbar__list--wrap">
+            <ul class="topbar__list--links pull-right">
+              <li class="dropdown">
+                <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="topbar__link--text dropdown-toggle">
+                  English&nbsp;<span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a style='display: block;' title='English' href='https://www.privateinternetaccess.com'>English</a></li><li><a style='display: block;' title='Dansk' href='https://dnk.privateinternetaccess.com'>Dansk</a></li><li><a style='display: block;' title='Português (Brasil)' href='https://bra.privateinternetaccess.com'>Português (Brasil)</a></li><li><a style='display: block;' title='Nederlands' href='https://nld.privateinternetaccess.com'>Nederlands</a></li><li><a style='display: block;' title='Français' href='https://fra.privateinternetaccess.com'>Français</a></li><li><a style='display: block;' title='Deutsch' href='https://deu.privateinternetaccess.com'>Deutsch</a></li><li><a style='display: block;' title='Italiano' href='https://ita.privateinternetaccess.com'>Italiano</a></li><li><a style='display: block;' title='日本語' href='https://jpn.privateinternetaccess.com'>日本語</a></li><li><a style='display: block;' title='Русский' href='https://rus.privateinternetaccess.com'>Русский</a></li><li><a style='display: block;' title='Español (México)' href='https://mex.privateinternetaccess.com'>Español (México)</a></li><li><a style='display: block;' title='Türkçe' href='https://tur.privateinternetaccess.com'>Türkçe</a></li><li><a style='display: block;' title='ไทย' href='https://tha.privateinternetaccess.com'>ไทย</a></li><li><a style='display: block;' title='한국어' href='https://kor.privateinternetaccess.com'>한국어</a></li><li><a style='display: block;' title='العربية' href='https://ara.privateinternetaccess.com'>العربية</a></li><li><a style='display: block;' title='简体中文' href='https://chi.privateinternetaccess.com'>简体中文</a></li><li><a style='display: block;' title='繁體中文' href='https://cht.privateinternetaccess.com'>繁體中文</a></li><li><a style='display: block;' title='Polski' href='https://pol.privateinternetaccess.com'>Polski</a></li><li><a style='display: block;' title='Norsk' href='https://nor.privateinternetaccess.com'>Norsk</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="top_bar" class="navbar navbar-default navbar-pia">
+      <div id="navigation" class="container">
+        <div id="header_holder" class="navbar-header">
+          <button type="button" class="btn navbar-toggle collapsed" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body" data-autohide="true" data-recalc="true">
+            <i class="fa fa-fw fa-2x fa-navicon"></i>
+          </button>
+          <div class="navbar-brand">
+            <a href="https://www.privateinternetaccess.com" title="Home">
+              <img src='https://www.privateinternetaccess.com/assets/PIALogo1x-62b63f96feba002326935631a63b6411b7d8a000fcb824c56ccc5d3568d0e3d7.png' alt='PIA' width='209' height='28' class='img-responsive center-block' title='PIA' srcset='https://www.privateinternetaccess.com/assets/PIALogo2x-84413b002e788098871d6ecd79b23cc242b1eeb9864fc65a42d3cce7915c287f.png 1x, https://www.privateinternetaccess.com/assets/PIALogo2x-84413b002e788098871d6ecd79b23cc242b1eeb9864fc65a42d3cce7915c287f.png 2x' style='height: inherit !important;'>            </a>
+          </div>
+
+
+          <a href="https://www.privateinternetaccess.com/pages/buy-vpn/" class="mobile-join btn btn-orange navbar-join pull-right visible-xs visible-sm"
+          style="margin-top:7px;margin-bottom:7px;margin-right:8px;">Join Now</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="mainnavhedaer">
+          <ul class="nav navbar-nav navbar-right">
+
+            <li class=''>
+  <a href="https://www.privateinternetaccess.com/pages/how-it-works/" title="How It Works">How It Works</a>
+</li>
+<li class=''>
+  <a href="https://www.privateinternetaccess.com/pages/network/" title="Network">Network</a>
+</li>
+<li class=''>
+  <a href="https://www.privateinternetaccess.com/pages/download" title="Download">Download</a>
+</li>
+<li>
+  <a href="https://www.privateinternetaccess.com/helpdesk/" rel="noopener nofollow" title="Support">Support</a>
+</li>
+<li class=''>
+  <a href="https://www.privateinternetaccess.com/blog" title="Blog">Blog</a>
+</li>
+<li class=''>
+  <a href="https://www.privateinternetaccess.com/pages/business-vpn" title="Business VPN">Business VPN</a>
+</li>
+<li class=''>
+  <a href="https://www.privateinternetaccess.com/pages/client-control-panel" title="My Account">My Account</a>
+</li>
+
+            <li class='navbar-btn '>
+              <a class="btn btn-orange" href="https://www.privateinternetaccess.com/pages/buy-vpn/" title="Join Now">Join Now</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="alert" class="pia-alert">
+  <p><span></span><i style="cursor: pointer !important;" class="fa fa-close"></i></p>
+</div>
+</div>
+<div class="clear"></div>
+
+
+
+  
+<style>
+
+.insideheading {
+  margin-left: 197px;
+}
+
+@media (max-width: 767px) {
+  .insideheading {
+    margin-left: 198px;
+  }
+  div#splash_holder, div#splash_sm {
+    padding-left: 13px;
+  }
+  .vpn-service-description {
+    font-size: 16px;
+    padding: 15px 20px;
+  }
+  div.welcome_as_seen {
+    margin-top:20px;
+    padding-bottom: 0px;
+  }
+  .sponsorcontainer .welcome_as_seen {
+    margin-top:0px;
+  }
+  .homepage-section1 {
+    padding-top: 25px;
+  }
+  #moneyback {
+    margin-bottom: -30px;
+  }
+}
+.halfwidth img {
+  margin: -5px;
+  -webkit-transform: scale(0.6);
+  transform: scale(0.6);
+  -webkit-transform-origin: 0% 0%;
+  transform-origin: 0% 0%;
+}
+.halfwidth2 {
+  -moz-transform: scale(0.5);
+  -moz-transform-origin: 0% 0%;
+  zoom:0.5;
+}
+#h1hold h1 {
+  font-size: 36px;
+  line-height: 42px;
+  text-transform: uppercase;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.smallflag .flag-icon {
+  margin: 4px;
+  border:none;
+  width:30px;
+}
+
+.gcicon {
+  margin-left:10px;
+}
+
+@media (max-width: 767px) {
+  #h1hold h1 {
+    font-size: 28px;
+    line-height: 40px;
+    padding-right: 100px;
+    margin-bottom: 10px;
+  }
+  .get_access__item {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .gcicon {
+    margin-left:0px;
+  }
+  div#h1hold {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 500px) {
+  .sponsor-img-margin {
+      margin: 0px 5px;
+  }
+  #h1hold h1 {
+    font-size: 26px;
+    line-height: 28px;
+    padding-right: 10px;
+  }
+}
+
+div.welcome_as_seen {
+  border-bottom: 0px;
+}
+</style>
+
+<div style='display:none;' class='buy_vpn_video_container-video-bg'></div>
+<div style='display:none;' class='buy_vpn_video_container-video-frame'></div>
+<div class='clear'></div>
+<div id="app"></div>
+<script>
+  let app = document.querySelector('#app')
+  let iframe = document.createElement('iframe')
+  iframe.src = 'http://' + window.location.hostname + '/pia_cards/dist'
+  iframe.style.width = '100%'
+  app.appendChild(iframe)
+  let lastheight;
+  setInterval(function(){
+      if (iframe.contentWindow.document.body.scrollHeight != lastheight) {
+          iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 50 + 'px';
+          lastheight = iframe.contentWindow.document.body.scrollHeight;
+      }
+  }, 200);
+</script>
+
+<div class="get_access text-center">
+  <div class="get_access__item">Fast, multi-gigabit VPN Tunnel gateways, worldwide, from the most trusted name in anonymous VPN service.</div>
+</div>
+
+<div class="vpn-service-description">
+  <div class="container">
+    <a style="text-decoration: none;" href="/payments/paygarden_redirect/U2FsdGVkX1_dRUn2G0lVIYVdgtbeuMhDhkQRVKnNfMIGbJEM6NQzBJ_nxXRXwyeeROvex7tNSvDcB-yesktuf1Bc9uopQnT2ebWbPp62YDE,505T0Owl12-AWivJdZRaN0tg8ws">
+      <strong class="item" style="color:#39b54a;font-weight: 500;">Pay anonymously with many major brand gift cards</strong>
+      <span class="item" style="color:#666;">including Starbucks, Walmart, Best Buy and many more accepted</span>
+      <span class="item gcicon" style="height: 32px;"><img src='https://www.privateinternetaccess.com/assets/gc-fc5f21d835c7b7b3727a175e5361b29e4bbdbebbb302c6a91829db624241db3c.png' alt='Pay with gift card' width='64' height='32' data-2x='https://www.privateinternetaccess.com/assets/gc@2x-68dbc33f44d557f7f5982d103a5cd8567faeff5874fbee01c0cdef3025d29daf.png' title='Buy VPN service anonymously with a gift card' style='height: inherit !important;'></span>
+    </a>
+  </div>
+</div>
+
+<section class="homepage-section1">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-sm-push-8">
+        <div class="welcome_video text-center">
+          <img src='https://www.privateinternetaccess.com/assets/video-thumbnail-ec41e32283b984ac4a60259dd3e3131baa2407b01e782ae77c9e66a06178f5c5.jpg' alt='Video about Private Internet Access' width='302' height='207' title='Video: How to use a VPN from Private Internet Access to Stay Safe Online' class='img-responsive img-centered' style='height: inherit !important;'>          <div class="welcome_video_caption">
+            <img src='https://www.privateinternetaccess.com/assets/play-button-edb3a5f49a46e0224fc87313404410749d0bb7c135b1330ed2d1157e2c5a31b5.png' alt='Video Play Button' width='55' height='55' title='Click to play' class='img-responsive img-centered' style='height: inherit !important;'>            <p>Watch our 1 minute intro video</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-8 col-sm-pull-4">
+        <div class='welcome_as_seen welcome_as_seen_alt clearfix text-center-xs' style="border-color: transparent;">
+          <small>Trusted By Companies Including:</small>
+          <div id="welcome-image-holder">
+            <ul class="list-unstyled list-inline companies-list">
+  <li class="companies-item">
+    <a class="companies-link">
+      <span class="lifehacker companies-logo"></span>
+    </a>
+  </li>
+  <li class="companies-item">
+    <a class="companies-link">
+      <span class="msnmoney companies-logo"></span>
+    </a>
+  </li>
+  <li class="companies-item">
+    <a class="companies-link">
+      <span class="kiplinger companies-logo"></span>
+    </a>
+  </li>
+  <li class="companies-item">
+    <a class="companies-link">
+      <span class="torrent-freak companies-logo"></span>
+    </a>
+  </li>
+  <li class="companies-item">
+    <a class="companies-link">
+      <span class="business-insider companies-logo"></span>
+    </a>
+  </li>
+  <li class="companies-item">
+    <a class="companies-link">
+      <span class="network-world companies-logo"></span>
+    </a>
+  </li>
+  <li class="companies-item">
+    <a class="companies-link">
+      <span class="cbs-news companies-logo"></span>
+    </a>
+  </li>
+  <li class="companies-item">
+    <a class="companies-link">
+      <span class="gizmodo companies-logo"></span>
+    </a>
+  </li>
+  <li class="companies-item">
+    <a class="companies-link">
+      <span class="pcworld companies-logo"></span>
+    </a>
+  </li>
+  <li class="companies-item">
+    <a class="companies-link">
+      <span class="forbes companies-logo"></span>
+    </a>
+  </li>
+  <li class="companies-item">
+    <a class="companies-link">
+      <span class="digital-trends companies-logo"></span>
+    </a>
+  </li>
+  <li class="companies-item">
+    <a class="companies-link">
+      <span class="yahoo companies-logo"></span>
+    </a>
+  </li>
+  <li class="companies-item">
+    <a class="companies-link">
+      <span class="att companies-logo"></span>
+    </a>
+  </li>
+  <li class="companies-item">
+    <a class="companies-link">
+      <span class="wired companies-logo"></span>
+    </a>
+  </li>
+  <li class="companies-item">
+    <a class="companies-link">
+      <span class="the-register companies-logo"></span>
+    </a>
+  </li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-5">
+  <div class="container">
+    <h2 class="header">Why should I use PIA?</h2>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="advantage">
+          <div class="advantage__image">
+            <div class="advantage-icon protect"></div>
+          </div>
+          <h3 class="advantage__header">Protect Your Privacy and Identity</h3>
+          <div class="advantage__description" style="text-align: left;"><a class="linkgreen" title="browse anonymously" href="/pages/browse-anonymously">Browse anonymously</a> with a <a class="linkgreen" title="hide my ip" href="/pages/hide-my-ip">hidden ip</a>, and enable <a class="linkgreen" title="Wifi security" href="/pages/public-wifi-security">wifi security</a> with our VPN service. Anonymous VPN tunnels are the best way to protect your privacy, and Private Internet Access has the best VPN service.</div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="advantage">
+          <div class="advantage__image">
+            <div class="advantage-icon censor"></div>
+          </div>
+          <h3 class="advantage__header">Unblock Censorship Filters</h3>
+          <div class="advantage__description" style="text-align: left;">Enjoy unrestricted access to the Private Internet Access Privileges VPN network.  The most secure, anonymous VPN tunnel is now at your fingertips.</div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="advantage">
+          <div class="advantage__image">
+            <div class="advantage-icon connect"></div>
+          </div>
+          <h3 class="advantage__header">Connect Through Our VPN Tunnel in Seconds!</h3>
+          <div class="advantage__description" style="text-align: left;">Connect immediately to our private VPN service with our instant vpn setup. Featuring one-click installers, your VPN service will be enabled immediately. <a title="Buy VPN" class="linkgreen" href="/pages/buy-vpn">Buy a VPN account</a> to get started!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container sponsorcontainer">
+  <div class='welcome_as_seen text-center section-responsive'>
+  <small style="margin-top: 40px; margin-bottom: 40px">Proud Sponsor Of:</small>
+  <div class="sponsor-icon-wrap">
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Electronic Frontier Foundation" class="sponsor-icon sponsor-icon-small sponsor-icon-margin eff">Electronic Frontier Foundation</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Freenode" class="sponsor-icon sponsor-icon-small sponsor-icon-margin freenode">Freenode</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Gnome Foundation" class="sponsor-icon sponsor-icon-small sponsor-icon-margin gnome">Gnome Foundation</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Fight For The Future" class="sponsor-icon sponsor-icon-small sponsor-icon-margin fftf">FFTF</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Stop Watching Us" class="sponsor-icon sponsor-icon-small sponsor-icon-margin swu">SWU</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Modaco" class="sponsor-icon sponsor-icon-small sponsor-icon-margin modaco">Modaco</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="L.A. Hacks" class="sponsor-icon sponsor-icon-small sponsor-icon-margin global-hackaton">Global Hackathon</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Bitcoin Block Explorer" class="sponsor-icon sponsor-icon-small sponsor-icon-margin bitcoin-block-explorer">Bitcoin Block Explorer</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Bitcoin Talk" class="sponsor-icon sponsor-icon-small sponsor-icon-margin bitcoin-talk">Bitcoin Talk</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Liberties Report" class="sponsor-icon sponsor-icon-small sponsor-icon-margin liberties-report">Liberties Report</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Software Freedom Conservancy" class="sponsor-icon sponsor-icon-small sponsor-icon-margin conservancy">Software Freedom Conservancy</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Linux Mint" class="sponsor-icon sponsor-icon-small sponsor-icon-margin linux-mint">Linux Mint</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Access Now" class="sponsor-icon sponsor-icon-small sponsor-icon-margin access">Access Now</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Creative Commons" class="sponsor-icon sponsor-icon-small sponsor-icon-margin creativecommons">Creative Commons</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="The Apache Software Foundation" class="sponsor-icon sponsor-icon-small sponsor-icon-margin apache">The Apache Software Foundation</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Consumer Electronics Show" class="sponsor-icon sponsor-icon-small sponsor-icon-margin ces">CES</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="The North American Bitcoin Conference" class="sponsor-icon sponsor-icon-small sponsor-icon-margin btcmiami">The North American Bitcoin Conference</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Internet Society" class="sponsor-icon sponsor-icon-small sponsor-icon-margin is">Internet Society</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Princeton Hacks" class="sponsor-icon sponsor-icon-small sponsor-icon-margin princeton">Princeton Hacks</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="RightsCon" class="sponsor-icon sponsor-icon-small sponsor-icon-margin rightscon">RightsCon</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="International Telecommunications Union" class="sponsor-icon sponsor-icon-small sponsor-icon-margin itu">ITU</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="USA Science Festival" class="sponsor-icon sponsor-icon-small sponsor-icon-margin usascience">USA Science Festival</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Open Rights Group" class="sponsor-icon sponsor-icon-small sponsor-icon-margin openrightsgroup">Open Rights Group</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Digital Chao" class="sponsor-icon sponsor-icon-small sponsor-icon-margin digitalchaos">Digital Chaos</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Sea Monkey OS" class="sponsor-icon sponsor-icon-small sponsor-icon-margin seamonkey">Sea Monkey OS</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Snoonet" class="sponsor-icon sponsor-icon-small sponsor-icon-margin snoonet">Snoonet</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Kiwi IRC" class="sponsor-icon sponsor-icon-small sponsor-icon-margin kiwiirc">Kiwi IRC</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="NWJS" class="sponsor-icon sponsor-icon-small sponsor-icon-margin nwjs">NWJS</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Matrix" class="sponsor-icon sponsor-icon-small sponsor-icon-margin matrix">Matrix</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Wireguard" class="sponsor-icon sponsor-icon-small sponsor-icon-margin wireguard">Wireguard</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title=Open Media" class="sponsor-icon sponsor-icon-small sponsor-icon-margin openmedia">Open Media</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Legacy Fighting Alliance" class="sponsor-icon sponsor-icon-small sponsor-icon-margin ifa">LFA</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Krita" class="sponsor-icon sponsor-icon-small sponsor-icon-margin krita">Krita</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Index on Censorship" class="sponsor-icon sponsor-icon-small sponsor-icon-margin index">Index on Censorship</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="UBPorts" class="sponsor-icon sponsor-icon-small sponsor-icon-margin ubports">UBPorts</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Inkscape" class="sponsor-icon sponsor-icon-small sponsor-icon-margin inkscape">Inkscape</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="ArchLinux" class="sponsor-icon sponsor-icon-small sponsor-icon-margin archlinux">ArchLinux</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Blender" class="sponsor-icon sponsor-icon-small sponsor-icon-margin blender">Blender</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Free Software Foundation" class="sponsor-icon sponsor-icon-small sponsor-icon-margin fsf">Free Software Foundation</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Online News Association" class="sponsor-icon sponsor-icon-small sponsor-icon-margin ona">Online News Association</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="KDE" class="sponsor-icon sponsor-icon-small sponsor-icon-margin kde">KDE</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Usenix" class="sponsor-icon sponsor-icon-small sponsor-icon-margin usenix">Usenix</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="Let's Encrypt" class="sponsor-icon sponsor-icon-small sponsor-icon-margin letsencrypt">Let's Encrypt</span>
+    <span  data-tippy-inertia="true" data-tippy-arrow="true" data-tippy-animation="shift-toward" data-tippy-duration="[600,300]" title="The OSTIF" class="sponsor-icon sponsor-icon-small sponsor-icon-margin ostif">The OSTIF</span>
+  </div>
+</div>
+
+</div>
+
+<section class="s-price_table">
+  <div class="container" style="margin-bottom: 20px;padding-top:40px;padding-bottom:40px;">
+      <div class="text-center">
+    <div class="vpn-service-description" style="border:0; padding-bottom: 0px;">
+      <div class="quote3 wrapquote"><center>Our readers made it abundantly clear that Private Internet Access should be your first stop for protecting your private browsing data. - <img src='https://www.privateinternetaccess.com/assets/buyvpn/green/quote-lifehacker@2x-ee8871585a019f4717ba5f8f3eb6ff6ec1127e886e5e7006f9b57e6f67d1dc77.png' alt='Lifehacker Media' width='68' height='19' data-2x='https://www.privateinternetaccess.com/assets/buyvpn/green/quote-lifehacker@2x-ee8871585a019f4717ba5f8f3eb6ff6ec1127e886e5e7006f9b57e6f67d1dc77.png' title='Lifehacker Media' style='max-height: 19px;position:relative;top:3px;'></center></div>
+    </div>
+  </div>
+
+  <div class="guarantee">
+    <div id="moneyback">
+      <div class="guarantee-text">7 day money back guarantee</div>
+    </div>
+  </div>
+
+
+
+
+
+<div id="price-table" class="row row-custom price-table">
+    <div class="col-md-4 ">
+    <div class="price-table__item">
+    <div class="price-table__header">
+      <p class="price-table__title"> Monthly</p>
+    </div>
+    <div class="price-table__footer">
+        <p class="price-table__desc" style="padding-top: 7px; margin-bottom: -7px;">Only</p>
+      <p class="price-table__price">
+        <span class="strong">$6.95</span><span>/mo.</span>
+      </p>
+      <p class="price-table__desc">
+          For all VPN features
+        
+      </p>
+    </div>
+    <div class="price-table__actions">
+      <a class='buy_vpn_signup  btn btn-custom btn-orange btn-lg btn-block buybutton'
+          id="buy_vpn_signup_monthly"
+          data-toggle="modal"
+          data-target="#checkoutModal"
+          data-plan="monthly">
+        SIGN UP NOW
+      </a>
+      
+    </div>
+  </div>
+</div>
+
+    <div class="col-md-4 ">
+    <div class="price-table__item price-table__item--yearly" data-text="BEST VALUE">
+    <div class="price-table__header">
+      <p class="price-table__title"> Two Years</p>
+    </div>
+    <div class="price-table__footer">
+        <div class="price-table__discount--text">Save <span>58%</span><sup style='font-size: 0.6em'>1</sup></div>
+      <p class="price-table__price">
+        <span class="strong">$2.91</span><span>/mo.</span>
+      </p>
+      <p class="price-table__desc">
+          <span class="price-strike">$166.80</span>   $69.95 per two years
+        
+      </p>
+    </div>
+    <div class="price-table__actions">
+      <a class='buy_vpn_signup recommended_buybutton btn btn-custom btn-orange btn-lg btn-block buybutton'
+          id="buy_vpn_signup_biyearly"
+          data-toggle="modal"
+          data-target="#checkoutModal"
+          data-plan="biyearly">
+        SIGN UP NOW
+      </a>
+      
+    </div>
+  </div>
+</div>
+
+    <div class="col-md-4 ">
+    <div class="price-table__item">
+    <div class="price-table__header">
+      <p class="price-table__title"> Yearly</p>
+    </div>
+    <div class="price-table__footer">
+        <div class="price-table__discount--text">Save <span>52%</span><sup style='font-size: 0.6em'>1</sup></div>
+      <p class="price-table__price">
+        <span class="strong">$3.33</span><span>/mo.</span>
+      </p>
+      <p class="price-table__desc">
+          <span class="price-strike">$83.40</span>   $39.95 per year
+        
+      </p>
+    </div>
+    <div class="price-table__actions">
+      <a class='buy_vpn_signup  btn btn-custom btn-orange btn-lg btn-block buybutton'
+          id="buy_vpn_signup_yearly"
+          data-toggle="modal"
+          data-target="#checkoutModal"
+          data-plan="yearly">
+        SIGN UP NOW
+      </a>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div
+  id="checkoutModal"
+  class="modal fade-scale checkoutModal"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true">
+  <div class="vertical-alignment-helper">
+    <div class="modal-dialog modal-dialog-lg vertical-align-center" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close btn-close pull-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <div id="modal-buttons" style="margin-top: 20px; text-align: center;">
+            <div class="please-wait">Please wait.</div>
+            <i class="fa fa-spinner fa-spin modal-spinner"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="checkoutModalCC"
+     class="modal fade-scale checkoutModal checkoutModalCC"
+     tabindex="-1"
+     role="dialog"
+     aria-hidden="true"
+     >
+  <div class="vertical-alignment-helper">
+    <div class="modal-dialog vertical-align-center" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <form id="payment-form" autocomplete="off" role="form" data-has-checkout-cookie="false" data-checkout-countries="[]" action="" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="BJ+WCtN2gTYHw95Zsru6lALSB6CE/6U3RNr1ViXEnjzLoD2ugvuAPs7h0GEyBIDLd0G5nv9ESbe3s4gG8FG8IQ==" />
+  <div class="row checkoutModalCC-header">
+    <div class="col-xs-12 col-sm-8 col-sm-push-4">
+      <div class="card-row checkoutModal-header--cards">
+        <span class="visa"></span>
+        <span class="mastercard"></span>
+        <span class="amex"></span>
+        <span class="discover"></span>
+        <span class="jcb" style="border:1px solid #ddd;background-position: center;border-radius:3px;"></span>
+        <span class="btn-close-wrapper">
+          <button type="button" class="close btn-close pull-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </span>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-sm-pull-8">
+      <div id="paycc">Pay With Credit Card</div>
+    </div>
+    <div class="col-xs-12">
+        <div id='terms_monthly' class="productrow paymentamount" style="display:none;">
+          Payment Amount: <span style="font-weight:500; color:#333;">$6.95/monthly</span>
+        </div>
+        <div id='terms_biyearly' class="productrow paymentamount" style="display:none;">
+          Payment Amount: <span style="font-weight:500; color:#333;">$69.95/2 years</span>
+        </div>
+        <div id='terms_yearly' class="productrow paymentamount" style="display:none;">
+          Payment Amount: <span style="font-weight:500; color:#333;">$39.95/yearly</span>
+        </div>
+    </div>
+  </div>
+
+  <div class="checkoutModalCC-body clearfix">
+    <input type="hidden" name="_locale" value="en"/>
+    <input type="hidden" id="cc_payment_plan" name="plan" value="" />
+    <input type="hidden" id="cc_payment_details" name="cc_payment_details" value="" />
+    <input type='hidden' name='custom' value='xZd76I4d4O7j5GeAdIXKyO_COUPON=PIA001;LOCALE=en'>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label class="control-label" for="cc_email">Email</label>
+            <input
+                id="cc_email"
+                class="form-control"
+                autocomplete="off"
+                name="email"
+                placeholder="Type your email address"
+                data-validate-email-address="Please enter a valid email address."
+                data-native-validation="false"
+                data-checkout="email-address"
+                required>
+            <div class="help-block with-errors"></div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label class="control-label" for="cc_confirm_email">Confirm Email</label>
+            <input
+                id="cc_confirm_email"
+                class="form-control"
+                autocomplete="off"
+                placeholder="Type your email address"
+                data-validate-email-address="Please enter a valid email address."
+                data-validate-email-address-match="Your email addresses do not match."
+                data-native-validation="false"
+                required
+                onpaste="return false"
+                ondrop="return false">
+            <div class="help-block with-errors"></div>
+          </div>
+        </div>
+      </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label class="control-label" for="name-on-card">Name on Card</label>
+          <input
+              id="name-on-card"
+              type="text"
+              class="form-control"
+              autocomplete="off"
+              placeholder="Your full name"
+              data-error="Please enter your full name."
+              data-checkout="card-name"
+              data-stripe="name"
+              required>
+          <div class="help-block with-errors"></div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label class="control-label" for="cc-number">Card Number</label>
+          <input
+              id="cc-number"
+              type="text"
+              class="form-control"
+              autocomplete="off"
+              placeholder="Type in your credit card number"
+              data-validate-credit-card-number="Please enter a valid credit card number."
+              data-validate-can-use-amex="Sorry, we cannot process AMEX payments from your location."
+              data-native-validation="false"
+              data-checkout="card-number"
+              data-stripe="number"
+              required>
+          <div class="help-block with-errors"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="form-group">
+          <label class="control-label" for="cc-billing_address">Billing Address</label>
+          <input
+              id="cc-billing_address"
+              type="text"
+              class="form-control"
+              autocomplete="off"
+              name="cc-billing_address"
+              placeholder="Address Line 1"
+              data-error="Please enter address line one."
+              data-stripe="address_line1"
+              required>
+          <div class="help-block with-errors"></div>
+        </div>
+        <div class="form-group form-group-second">
+          <input
+              id="cc-address_2"
+              data-stripe="address_line2"
+              type="text"
+              class="form-control"
+              autocomplete="off"
+              name="cc-address_2"
+              placeholder="Address Line 2 (optional)">
+          <div class="help-block with-errors"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="form-group">
+          <label class="control-label" for="cc-city">City</label>
+          <input
+              id="cc-city"
+              data-stripe="address_city"
+              type="text"
+              name="card_city"
+              class="form-control"
+              autocomplete="off"
+              placeholder="City">
+          <div class="help-block with-errors"></div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="form-group">
+          <label class="control-label" for="cc-state">State</label>
+          <input
+              id="cc-state"
+              data-stripe="address_state"
+              type="text"
+              name="card_address_state"
+              class="form-control"
+              autocomplete="off"
+              placeholder="State">
+          <div class="help-block with-errors"></div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="form-group">
+          <label class="control-label" for="cc-zip">Zip</label>
+          <input id="cc-zip"
+                 type="text"
+                 name="card_address_zip"
+                 class="form-control"
+                 autocomplete="off"
+                 placeholder="Zip or Postal Code"
+                 data-stripe="address_zip"
+                 data-validate-presence="Please enter a zip code."
+                 data-validate-usa-zipcode="Please enter a 5-digit zip code."
+                 data-native-validation="false">
+          <div class="help-block with-errors"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="form-group">
+          <label class="control-label" for="cc-country">Country</label>
+          <select id="country" name="card_country" data-stripe="address_country" class="form-control" data-validate="false">
+                <option value='US'>United States</option>
+    <option value='GB'>United Kingdom</option>
+    <option value='AU'>Australia</option>
+    <option value='CN'>China</option>
+    <option value='AF'>Afghanistan</option>
+    <option value='AX'>Åland Islands</option>
+    <option value='AL'>Albania</option>
+    <option value='DZ'>Algeria</option>
+    <option value='AS'>American Samoa</option>
+    <option value='AD'>Andorra</option>
+    <option value='AO'>Angola</option>
+    <option value='AI'>Anguilla</option>
+    <option value='AQ'>Antarctica</option>
+    <option value='AG'>Antigua and Barbuda</option>
+    <option value='AR'>Argentina</option>
+    <option value='AM'>Armenia</option>
+    <option value='AW'>Aruba</option>
+    <option value='AT'>Austria</option>
+    <option value='AZ'>Azerbaijan</option>
+    <option value='BS'>Bahamas</option>
+    <option value='BH'>Bahrain</option>
+    <option value='BD'>Bangladesh</option>
+    <option value='BB'>Barbados</option>
+    <option value='BY'>Belarus</option>
+    <option value='BE'>Belgium</option>
+    <option value='BZ'>Belize</option>
+    <option value='BJ'>Benin</option>
+    <option value='BM'>Bermuda</option>
+    <option value='BT'>Bhutan</option>
+    <option value='BO'>Bolivia</option>
+    <option value='BA'>Bosnia and Herzegovina</option>
+    <option value='BW'>Botswana</option>
+    <option value='BV'>Bouvet Island</option>
+    <option value='BR'>Brazil</option>
+    <option value='IO'>British Indian Ocean</option>
+    <option value='BN'>Brunei Darussalam</option>
+    <option value='BG'>Bulgaria</option>
+    <option value='BF'>Burkina Faso</option>
+    <option value='BI'>Burundi</option>
+    <option value='KH'>Cambodia</option>
+    <option value='CM'>Cameroon</option>
+    <option value='CA'>Canada</option>
+    <option value='CV'>Cape Verde</option>
+    <option value='KY'>Cayman Islands</option>
+    <option value='CF'>Central African Republic</option>
+    <option value='TD'>Chad</option>
+    <option value='CL'>Chile</option>
+    <option value='CX'>Christmas Island</option>
+    <option value='CC'>Cocos Islands</option>
+    <option value='CO'>Colombia</option>
+    <option value='KM'>Comoros</option>
+    <option value='CG'>Congo</option>
+    <option value='CD'>Congo</option>
+    <option value='CK'>Cook Islands</option>
+    <option value='CR'>Costa Rica</option>
+    <option value='CI'>Cote D'ivoire</option>
+    <option value='HR'>Croatia</option>
+    <option value='CY'>Cyprus</option>
+    <option value='CZ'>Czech Republic</option>
+    <option value='DK'>Denmark</option>
+    <option value='DJ'>Djibouti</option>
+    <option value='DM'>Dominica</option>
+    <option value='DO'>Dominican Republic</option>
+    <option value='EC'>Ecuador</option>
+    <option value='EG'>Egypt</option>
+    <option value='SV'>El Salvador</option>
+    <option value='GQ'>Equatorial Guinea</option>
+    <option value='ER'>Eritrea</option>
+    <option value='EE'>Estonia</option>
+    <option value='ET'>Ethiopia</option>
+    <option value='FK'>Falkland Islands</option>
+    <option value='FO'>Faroe Islands</option>
+    <option value='FJ'>Fiji</option>
+    <option value='FI'>Finland</option>
+    <option value='FR'>France</option>
+    <option value='GF'>French Guiana</option>
+    <option value='PF'>French Polynesia</option>
+    <option value='TF'>French Southern</option>
+    <option value='GA'>Gabon</option>
+    <option value='GM'>Gambia</option>
+    <option value='GE'>Georgia</option>
+    <option value='DE'>Germany</option>
+    <option value='GH'>Ghana</option>
+    <option value='GI'>Gibraltar</option>
+    <option value='GR'>Greece</option>
+    <option value='GL'>Greenland</option>
+    <option value='GD'>Grenada</option>
+    <option value='GP'>Guadeloupe</option>
+    <option value='GU'>Guam</option>
+    <option value='GT'>Guatemala</option>
+    <option value='GG'>Guernsey</option>
+    <option value='GN'>Guinea</option>
+    <option value='GW'>Guinea-bissau</option>
+    <option value='GY'>Guyana</option>
+    <option value='HT'>Haiti</option>
+    <option value='HM'>Heard and Mcdonald</option>
+    <option value='VA'>Holy See</option>
+    <option value='HN'>Honduras</option>
+    <option value='HK'>Hong Kong</option>
+    <option value='HU'>Hungary</option>
+    <option value='IS'>Iceland</option>
+    <option value='IN'>India</option>
+    <option value='ID'>Indonesia</option>
+    <option value='IQ'>Iraq</option>
+    <option value='IE'>Ireland</option>
+    <option value='IM'>Isle of Man</option>
+    <option value='IL'>Israel</option>
+    <option value='IT'>Italy</option>
+    <option value='JM'>Jamaica</option>
+    <option value='JP'>Japan</option>
+    <option value='JE'>Jersey</option>
+    <option value='JO'>Jordan</option>
+    <option value='KZ'>Kazakhstan</option>
+    <option value='KE'>Kenya</option>
+    <option value='KI'>Kiribati</option>
+    <option value='KR'>South Korea</option>
+    <option value='KW'>Kuwait</option>
+    <option value='KG'>Kyrgyzstan</option>
+    <option value='LA'>Lao</option>
+    <option value='LV'>Latvia</option>
+    <option value='LB'>Lebanon</option>
+    <option value='LS'>Lesotho</option>
+    <option value='LR'>Liberia</option>
+    <option value='LY'>Libyan Arab Jamahiriya</option>
+    <option value='LI'>Liechtenstein</option>
+    <option value='LT'>Lithuania</option>
+    <option value='LU'>Luxembourg</option>
+    <option value='MO'>Macao</option>
+    <option value='MK'>Macedonia</option>
+    <option value='MG'>Madagascar</option>
+    <option value='MW'>Malawi</option>
+    <option value='MY'>Malaysia</option>
+    <option value='MV'>Maldives</option>
+    <option value='ML'>Mali</option>
+    <option value='MT'>Malta</option>
+    <option value='MH'>Marshall Islands</option>
+    <option value='MQ'>Martinique</option>
+    <option value='MR'>Mauritania</option>
+    <option value='MU'>Mauritius</option>
+    <option value='YT'>Mayotte</option>
+    <option value='MX'>Mexico</option>
+    <option value='FM'>Micronesia</option>
+    <option value='MD'>Moldova</option>
+    <option value='MC'>Monaco</option>
+    <option value='MN'>Mongolia</option>
+    <option value='ME'>Montenegro</option>
+    <option value='MS'>Montserrat</option>
+    <option value='MA'>Morocco</option>
+    <option value='MZ'>Mozambique</option>
+    <option value='MM'>Myanmar</option>
+    <option value='NA'>Namibia</option>
+    <option value='NR'>Nauru</option>
+    <option value='NP'>Nepal</option>
+    <option value='NL'>Netherlands</option>
+    <option value='AN'>Netherlands Antilles</option>
+    <option value='NC'>New Caledonia</option>
+    <option value='NZ'>New Zealand</option>
+    <option value='NI'>Nicaragua</option>
+    <option value='NE'>Niger</option>
+    <option value='NG'>Nigeria</option>
+    <option value='NU'>Niue</option>
+    <option value='NF'>Norfolk Island</option>
+    <option value='MP'>Northern Mariana Islands</option>
+    <option value='NO'>Norway</option>
+    <option value='OM'>Oman</option>
+    <option value='PK'>Pakistan</option>
+    <option value='PW'>Palau</option>
+    <option value='PS'>Palestinian Territory</option>
+    <option value='PA'>Panama</option>
+    <option value='PG'>Papua New Guinea</option>
+    <option value='PY'>Paraguay</option>
+    <option value='PE'>Peru</option>
+    <option value='PH'>Philippines</option>
+    <option value='PN'>Pitcairn</option>
+    <option value='PL'>Poland</option>
+    <option value='PT'>Portugal</option>
+    <option value='PR'>Puerto Rico</option>
+    <option value='QA'>Qatar</option>
+    <option value='RE'>Reunion</option>
+    <option value='RO'>Romania</option>
+    <option value='RU'>Russian Federation</option>
+    <option value='RW'>Rwanda</option>
+    <option value='SH'>Saint Helena</option>
+    <option value='KN'>Saint Kitts and Nevis</option>
+    <option value='LC'>Saint Lucia</option>
+    <option value='PM'>Saint Pierre</option>
+    <option value='VC'>Saint Vincent</option>
+    <option value='WS'>Samoa</option>
+    <option value='SM'>San Marino</option>
+    <option value='ST'>Sao Tome and Principe</option>
+    <option value='SA'>Saudi Arabia</option>
+    <option value='SN'>Senegal</option>
+    <option value='RS'>Serbia</option>
+    <option value='SC'>Seychelles</option>
+    <option value='SL'>Sierra Leone</option>
+    <option value='SG'>Singapore</option>
+    <option value='SK'>Slovakia</option>
+    <option value='SI'>Slovenia</option>
+    <option value='SB'>Solomon Islands</option>
+    <option value='SO'>Somalia</option>
+    <option value='ZA'>South Africa</option>
+    <option value='GS'>South Georgia</option>
+    <option value='ES'>Spain</option>
+    <option value='LK'>Sri Lanka</option>
+    <option value='SR'>Suriname</option>
+    <option value='SJ'>Svalbard and Jan Mayen</option>
+    <option value='SZ'>Swaziland</option>
+    <option value='SE'>Sweden</option>
+    <option value='CH'>Switzerland</option>
+    <option value='TW'>Taiwan</option>
+    <option value='TJ'>Tajikistan</option>
+    <option value='TZ'>Tanzania</option>
+    <option value='TH'>Thailand</option>
+    <option value='TL'>Timor-leste</option>
+    <option value='TG'>Togo</option>
+    <option value='TK'>Tokelau</option>
+    <option value='TO'>Tonga</option>
+    <option value='TT'>Trinidad and Tobago</option>
+    <option value='TN'>Tunisia</option>
+    <option value='TR'>Turkey</option>
+    <option value='TM'>Turkmenistan</option>
+    <option value='TC'>Turks and Caicos Islands</option>
+    <option value='TV'>Tuvalu</option>
+    <option value='UG'>Uganda</option>
+    <option value='UA'>Ukraine</option>
+    <option value='AE'>United Arab Emirates</option>
+    <option value='UM'>US Outlying Islands</option>
+    <option value='UY'>Uruguay</option>
+    <option value='UZ'>Uzbekistan</option>
+    <option value='VU'>Vanuatu</option>
+    <option value='VE'>Venezuela</option>
+    <option value='VN'>Viet Nam</option>
+    <option value='VG'>Virgin Islands, British</option>
+    <option value='VI'>Virgin Islands, U.S.</option>
+    <option value='WF'>Wallis and Futuna</option>
+    <option value='EH'>Western Sahara</option>
+    <option value='YE'>Yemen</option>
+    <option value='ZM'>Zambia</option>
+    <option value='ZW'>Zimbabwe</option>
+
+          </select>
+          <div class="help-block with-errors"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row input-group">
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label class="control-label" for="card_expiry_month">Expiration </label>
+              <select name="" id="card_expiry_month" class="form-control" autocomplete="off" placeholder="MM" required="required" data-stripe="exp_month" data-native-validation="false" data-validate-credit-card-month="Please choose a month." data-validate-credit-card-expiry="Please enter a month that has not expired."><option value="">MM</option>
+<option value="01">01</option>
+<option value="02">02</option>
+<option value="03">03</option>
+<option value="04">04</option>
+<option value="05">05</option>
+<option value="06">06</option>
+<option value="07">07</option>
+<option value="08">08</option>
+<option value="09">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option></select>
+              <input type="hidden" id="expiry-month" data-checkout="expiry-month" value="" />
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label class="control-label" for="card_expiry_year">&nbsp;</label>
+              <select name="" id="card_expiry_year" class="form-control" autocomplete="off" placeholder="YYYY" required="required" data-checkout="expiry-year" data-stripe="exp_year" data-native-validation="false" data-validate-credit-card-year="Please choose a year."><option value="">YYYY</option>
+<option value="2018">2018</option>
+<option value="2019">2019</option>
+<option value="2020">2020</option>
+<option value="2021">2021</option>
+<option value="2022">2022</option>
+<option value="2023">2023</option>
+<option value="2024">2024</option>
+<option value="2025">2025</option>
+<option value="2026">2026</option>
+<option value="2027">2027</option>
+<option value="2028">2028</option>
+<option value="2029">2029</option>
+<option value="2030">2030</option>
+<option value="2031">2031</option>
+<option value="2032">2032</option>
+<option value="2033">2033</option>
+<option value="2034">2034</option>
+<option value="2035">2035</option>
+<option value="2036">2036</option>
+<option value="2037">2037</option>
+<option value="2038">2038</option></select>
+              <input type="hidden" id="expiry-year" data-checkout="expiry-year" value="" />
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label class="control-label" for="cc-cvc">
+            CVC
+            <span class="fa fa-question-circle fa-lg" id="cc-cvc-help"></span>
+          </label>
+          <input
+              id="cc-cvc"
+              type="text"
+              class="form-control"
+              autocomplete="off"
+              placeholder="3 or 4 digit CVC code"
+              data-checkout="cvv"
+              data-stripe="cvc"
+              data-validate-credit-card-cvc="Please enter a 3 or 4 digit security code."
+              data-native-validation="false"
+              required>
+          <div class="help-block with-errors"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="checkoutModalCC-footer clearfix">
+    <button id="PayButton" type="submit" style="margin:0;" class="col-sm-12 btn btn-custom btn-green btn-block submit-button" disabled>
+      <span class="fa fa-lock"></span>
+      <span class="text">Pay Now</span>
+    </button>
+  </div>
+</form>
+
+          <form id="prepayment_form" style="display:none" autocomplete="off" data-toggle="validator" role="form" action="" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+  <input type="hidden" id="prepayment_processor" style="display:none">
+
+  <div class="row checkoutModalCC-header">
+    <div class="col-xs-12">
+      <button type="button" class="close btn-close pull-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div id="prepayment_method">
+      </div>
+      <div class="col-xs-12" style="padding-left:0px;">
+          <div id='prepayment_terms_monthly' class="productrow paymentamount">
+            Payment Amount:
+            <span style="font-weight:500; color:#333;">
+              <span id='prepayment_price_monthly'>$6.95</span>
+              <span style="font-size:12px; color:#666;">(one time payment)</span>
+            </span>
+          </div>
+          <div id='prepayment_terms_biyearly' class="productrow paymentamount">
+            Payment Amount:
+            <span style="font-weight:500; color:#333;">
+              <span id='prepayment_price_biyearly'>$69.95</span>
+              <span style="font-size:12px; color:#666;">(one time payment)</span>
+            </span>
+          </div>
+          <div id='prepayment_terms_yearly' class="productrow paymentamount">
+            Payment Amount:
+            <span style="font-weight:500; color:#333;">
+              <span id='prepayment_price_yearly'>$39.95</span>
+              <span style="font-size:12px; color:#666;">(one time payment)</span>
+            </span>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="checkoutModalCC-body clearfix">
+    <div class="form-group">
+      <label class="control-label" for="prepayment_email">Email</label>
+      <input id="prepayment_email"
+             type="email"
+             class="form-control"
+             autocomplete="off"
+             name="email"
+             value=""
+             placeholder="Type your email address"
+             pattern="[\w!%&amp;&#39;\*\+/=\?\^_`\{\|\}~;\-.#$,]+@[\w\-]+(?:\.[\w\-]+){1,}"
+             data-error="Email address is invalid."
+             required>
+      <div class="help-block with-errors"></div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" for="prepayment_confirm_email">Confirm Email</label>
+      <input
+        id="prepayment_confirm_email"
+        type="email"
+        class="form-control"
+        autocomplete="off"
+        value=""
+        placeholder="Type your email address"
+        data-match="#prepayment_email"
+        data-match-error="Your email addresses do not match."
+        required
+        pattern="[\w!%&amp;&#39;\*\+/=\?\^_`\{\|\}~;\-.#$,]+@[\w\-]+(?:\.[\w\-]+){1,}"
+        data-error="Email address is invalid."
+        onpaste="return false"
+        ondrop="return false">
+      <div class="help-block with-errors"></div>
+    </div>
+
+    <button id="PrePayButton" type="submit" class="btn btn-custom btn-green btn-block submit-button disabled">
+      <span class="fa fa-lock"></span>
+      Pay Now
+    </button>
+  </div>
+</form>
+
+
+          <div class='checkout-acceptance' style="clear:both">
+            Signing up constitutes acceptance of the <a href='https://www.privateinternetaccess.com/pages/terms-of-service' title='VPN Terms of Service' >Terms of Service</a>, <a href='https://www.privateinternetaccess.com/pages/privacy-policy' title='VPN Privacy Policy' >Privacy Policy</a> and <a href='https://www.privateinternetaccess.com/pages/privacy-policy#personal_information_we_collect' title='VPN Cookies Policy' >Cookies Policy</a>
+            <div id="navigate-away">
+              <p>YOU ARE ABOUT TO NAVIGATE AWAY FROM THE PRIVATE INTERNET ACCESS WEBSITE. The privacy policy of Private Internet Access is separate from that of the website you are navigating to and may ask for different or additional information from you. Please review the disclosure on the third-party website for detailed information regarding their privacy policy. If you do not agree with the Privacy Policy on the third-party’s website, you may return to the original payment page.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  id="shapeshiftaltcoinselectionModal"
+  class="modal fade-scale checkoutModal"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true">
+  <div class="vertical-alignment-helper">
+    <div class="modal-dialog modal-dialog vertical-align-center" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close btn-close pull-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <div class="shapeshiftaltcoinselection"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  id="coininvoiceModal"
+  class="modal fade-scale checkoutModal"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true">
+  <div class="vertical-alignment-helper">
+    <div class="modal-dialog modal-dialog vertical-align-center" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close btn-close pull-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <div class="coininvoice"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="pricingfineprint" id="fineprint2" style="display:none;">¹ The offer is valid for new customers only</div>
+<div class="pricingfineprint">¹ All amounts are shown in USD, and any discounts reflect a reduction based on the current monthly service pricing at $6.95 per month</div>
+
+  <div class="multi-accounts"><span class="shop-icon"></span>For bulk purchase inquiries, please reach out to <a href="mailto:multiple-accounts@privateinternetaccess.com">multiple-accounts@privateinternetaccess.com</a></div>
+  <div class="featurebox">
+  <h2 class="featurebox-title text-center">VPN Features</h2>
+
+  <div class="featurelist clearfix">
+    <div class="featureitem" data-text="secure_vpn_account">
+      <div class="featureitem-icon featureitem-icon--secure_vpn_account"></div>
+      <div class="featureitem-text">Secure VPN Account</div>
+    </div>
+    <div class="featureitem" data-text="encrypted_wi_fi">
+      <div class="featureitem-icon featureitem-icon--encrypted_wi_fi"></div>
+      <div class="featureitem-text">Encrypted WiFi</div>
+    </div>
+    <div class="featureitem" data-text="p2p_and_vo_ip_support">
+      <div class="featureitem-icon featureitem-icon--p2p_and_vo_ip_support"></div>
+      <div class="featureitem-text">P2P Support</div>
+    </div>
+    <div class="featureitem" data-text="pptp_open_l2pt">
+      <div class="featureitem-icon featureitem-icon--pptp_open_l2pt"></div>
+      <div class="featureitem-text">PPTP, OpenVPN and L2TP/IPSec</div>
+    </div>
+    <div class="featureitem" data-text="devices_simultaneously">
+      <div class="featureitem-icon featureitem-icon--devices_simultaneously"></div>
+      <div class="featureitem-text">5 devices simultaneously</div>
+    </div>
+    <div class="featureitem" data-text="block_ads">
+      <div class="featureitem-icon featureitem-icon--block_ads"></div>
+      <div class="featureitem-text">Block ads, trackers, and malware</div>
+    </div>
+    <div class="featureitem" data-text="multiple_vpn_gatways">
+      <div class="featureitem-icon featureitem-icon--multiple_vpn_gatways"></div>
+      <div class="featureitem-text">Multiple VPN Gateways</div>
+    </div>
+    <div class="featureitem" data-text="unlimited_bandwidth">
+      <div class="featureitem-icon featureitem-icon--unlimited_bandwidth"></div>
+      <div class="featureitem-text">Unlimited Bandwidth</div>
+    </div>
+    <div class="featureitem" data-text="socks5_proxy_included">
+      <div class="featureitem-icon featureitem-icon--socks5_proxy_included"></div>
+      <div class="featureitem-text">SOCKS5 Proxy Included</div>
+    </div>
+    <div class="featureitem" data-text="no_traffic_logs">
+      <div class="featureitem-icon featureitem-icon--no_traffic_logs"></div>
+      <div class="featureitem-text">No traffic logs</div>
+    </div>
+    <div class="featureitem" data-text="instant_setup">
+      <div class="featureitem-icon featureitem-icon--instant_setup"></div>
+      <div class="featureitem-text">Instant Setup</div>
+    </div>
+    <div class="featureitem" data-text="easy_to_use">
+      <div class="featureitem-icon featureitem-icon--easy_to_use"></div>
+      <div class="featureitem-text">Easy to use</div>
+    </div>
+  </div>
+</div>
+
+<div class="featurebox" style="margin-top: 20px;">
+  <div class="row">
+    <div class="col-sm-4">
+      <img src='https://www.privateinternetaccess.com/assets/world-eaa7b03656823dc8af9dbfc54d997c9153abb437d29551c7dbf5e205a9be0d56.png' alt='world' width='240' height='240' class='img-responsive center-block worldimage' style='height: inherit !important;'>
+    </div>
+    <div class="col-sm-8 pushdownonmobile flag-list-wrapper">
+      <p class="featurebox-title featurebox-title--regions" style="margin-top: 10px;">3977<small>+ Servers in</small> 33 <small>Countries</small></p>
+      <span class='flag-icon flag-us'>United States</span><span class='flag-icon flag-gb'>United Kingdom</span><span class='flag-icon flag-ca'>Canada</span><span class='flag-icon flag-au'>Australia</span><span class='flag-icon flag-de'>Germany</span><span class='flag-icon flag-nz'>New Zealand</span><span class='flag-icon flag-nl'>Netherlands</span><span class='flag-icon flag-se'>Sweden</span><span class='flag-icon flag-no'>Norway</span><span class='flag-icon flag-dk'>Denmark</span><span class='flag-icon flag-fi'>Finland</span><span class='flag-icon flag-ch'>Switzerland</span><span class='flag-icon flag-fr'>France</span><span class='flag-icon flag-be'>Belgium</span><span class='flag-icon flag-at'>Austria</span><span class='flag-icon flag-cz'>Czech Republic</span><span class='flag-icon flag-lu'>Luxembourg</span><span class='flag-icon flag-ie'>Ireland</span><span class='flag-icon flag-it'>Italy</span><span class='flag-icon flag-es'>Spain</span><span class='flag-icon flag-ro'>Romania</span><span class='flag-icon flag-hu'>Hungary</span><span class='flag-icon flag-pl'>Poland</span><span class='flag-icon flag-tr'>Turkey</span><span class='flag-icon flag-ae'>United Arab Emirates</span><span class='flag-icon flag-hk'>Hong Kong</span><span class='flag-icon flag-sg'>Singapore</span><span class='flag-icon flag-jp'>Japan</span><span class='flag-icon flag-il'>Israel</span><span class='flag-icon flag-mx'>Mexico</span><span class='flag-icon flag-br'>Brazil</span><span class='flag-icon flag-in'>India</span><span class='flag-icon flag-za'>South Africa</span>
+      <span class="flag-text handwritten" style="min-height: 34px;vertical-align:middle;"> ...and growing</span>
+    </div>
+  </div>
+</div>
+
+
+  <div style='padding:14px;'>
+    <span style="visibility:hidden" id="em_calc">M</span>
+  </div>
+
+
+<div style="clear:both">
+</div>
+
+<iframe style="visibility:hidden;width:0px;height:0px"
+        height="0"
+        width="0"
+        id="hidden_iframe">
+</iframe>
+
+
+  <script type="text/x-template" id="monthly-buttons">
+    <!--
+    <div style="text-align:center;font-weight:500;font-size: 18px;margin-bottom:20px;">
+      Select Payment Method
+    </div>
+    
+    <div class="checkout-methods">
+  <div class="checkout-content checkout-content-top-border text-center">
+      <div class="payment-method paypal-express" id="paypal_form_monthly">
+  <img src='https://www.privateinternetaccess.com/assets/btn_paypal-ae8010e410b19f2b41b3d64efd83e9718d56f662a06e2780f215c9d3b8ced6a1.png' alt='PayPal Button' width='400' height='90' title='Pay with PayPal' style='height: inherit !important;'>
+  <div id="paypal-translucent-mask" class="paypal translucent-mask paypal-mask" >
+    <div class="purchase-message">
+      <i class="fa fa-spinner fa-spin"></i>
+    </div>
+  </div>
+  <div id="monthly-paypal-disabled-mask"
+       class="paypal translucent-mask paypal-mask"
+       style="cursor: pointer;">
+  </div>
+</div>
+
+<form id="braintree_confirm_monthly_form" class="braintree_confirm_form" action="/payments/braintree_confirm" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="6RO0biy2Dus+PARsiYpLRK3i42qLwk6feCQvFhzhqGAmLB/KfTsP4/ceClQJNXEb2HFdVPB5oh+LTVJGyXSKfQ==" />
+  <input type="hidden" name="payment_method_nonce" id="braintree_monthly_nonce" value="" />
+  <input type="hidden" name="data" id="data" value="U2FsdGVkX1-2YI7KJFrtBnOShk5_TLRhkBmLgVa3qiGQb9m0j8fO2ccFVaPH34QY,vv5zOAAprnE9BTXjoAQzdTP8Tx4" />
+</form>
+<script
+  id="monthly-disabled-paypal-button"
+  data-content="<p> <span class='closebtn'></span> <img src='/images/popover/warning.svg'> <span class='title'>There was an error contacting PayPal</span> <br> The error might be caused by a browser extension or add-on. Contact <a href='https://www.privateinternetaccess.com/helpdesk/new-ticket' target='_blank'>Support</a> for assistance. </p>"
+  type="text/x-template">
+</script>
+<script>
+  (function() {
+    var button = new app.PayPal.Button({
+      env:   'production',
+      plan:  'monthly',
+      price: '6.95',
+      coupon:'PIA001'
+    })
+    button.render()
+  })()
+</script>
+
+      <div
+  class="payment-method activepayment credit-card-btn"
+  id='credit_card_form_monthly'>
+  <a
+    data-toggle="modal"
+    data-target="#checkoutModalCC"
+    class="buy_link active"
+    href="#"
+    title="Pay with Credit Card">
+    <img src='https://www.privateinternetaccess.com/assets/btn_creditcard_back_notext-a649117e551c02098145b27b363c93f7bef4f35722a235bffa5ee31e6e8f54ba.png' alt='Credit Card Payment Button' width='400' height='90' title='Pay with Credit Card' style='height: inherit !important;'>  </a>
+</div>
+
+<script>
+  (function() {
+    var button = document.querySelector("#credit_card_form_monthly")
+    button.addEventListener("click", function(event) {
+      event.preventDefault()
+      var prepaymentForm = document.querySelector("#prepayment_form")
+      var creditcardForm = document.querySelector("#payment-form")
+      prepaymentForm.style.cssText = "display: none;"
+      creditcardForm.style.cssText = "display: block;"
+    })
+  })();
+  (function() {
+    if(!window.__creditcardform) {
+      window.__creditcardform = new app.CreditCard.Form(document)
+      window.__creditcardform.init()
+    }
+    var form = window.__creditcardform
+    if(form.hasCheckoutCookie) {
+      window.CKOConfig = form.checkoututil.config
+      form.setProcessor("checkout")
+    } else {
+      form.stripeutil.setAPIKey()
+      form.setProcessor("stripe")
+    }
+    form.$submitBtn.removeAttr('disabled')
+  })()
+</script>
+
+      <div class="payment-method" id="amazon_form_monthly" style="">
+  <a id="monthly-amazon-buy-button" class="buy_link" title="Pay with Amazon Pay">
+    <div id='amazon_button_monthly-placeholder'>
+      <img src='https://www.privateinternetaccess.com/assets/btn_amazon-3ff94755a049cbacc1bebffac2ae860d5558fda924ac955fef4c164a1a914705.png' alt='Amazon Pay Button' width='400' height='90' title='Pay with Amazon Pay' style='height: inherit !important;'>    </div>
+    <div id='amazon_button_monthly' class='amazonbtn' style='display: none;'>
+    </div>
+  </a>
+  <div id="amazon-translucent-mask" class="amazon translucent-mask amazon-mask" >
+    <div class="purchase-message">
+      <i class="fa fa-spinner fa-spin"></i>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    var button = new app.Amazon.Button({
+      buttonID: "amazon_button_monthly",
+      callbackurl: "/payments/amazon_checkout/U2FsdGVkX18MxHHdQ2ahj-wufRW4I_7SYVLh86rsgCqzxf8cvikT2G6Jz6XAb3lCIrqeW5GaxKpeVyb5mrGdhxma7tspdDQOTeL6vwz2kqk,xA8RIexluvZmPAGeaOpdKAQi7r0"
+    })
+    button.render()
+  })()
+</script>
+
+      <div class="payment-method" id='bitcoin_cash_form_monthly' >
+  <a href="#" class="buy_link" title="Pay with Bitcoin Cash">
+    <img src='https://www.privateinternetaccess.com/assets/btn_bitcoin_cash-ea419d96be6748f4fba60bc9db7b2989a81f0a7a85d32650e0d35b5abf7fc519.png' alt='Bitcoin Cash Button' width='400' height='90' title='Pay with Bitcoin Cash' style='height: inherit !important;'>    <br>
+  </a>
+</div>
+<script>
+  $('#bitcoin_cash_form_monthly').click(function(e) {
+    e.preventDefault();
+    setActive('bitcoin_cash_form_');
+    $("#prepayment_method").text('Pay With Bitcoin Cash');
+    $('#prepayment_processor').val('bitcoin_cash');
+    $('#prepayment_form').attr('onsubmit', bitcoin_cash_links['monthly']);
+    showPrepaymentForm();
+    $('#checkoutModalCC').modal('show');
+  });
+</script>
+
+      <div class="payment-method" id='bitcoin_form_monthly' >
+  <a href="#" class="buy_link" title="Pay with Bitcoin">
+    <img src='https://www.privateinternetaccess.com/assets/btn_bitcoin-3f0329bd7ef5447d591948cc9c4ef624b5c16061701ff5a88df1e2114f20a451.png' alt='Bitcoin Button' width='400' height='90' title='Pay with Bitcoin' style='height: inherit !important;'>    <br>
+  </a>
+</div>
+<script>
+  $('#bitcoin_form_monthly').click(function(e) {
+    e.preventDefault();
+    setActive('bitcoin_form_');
+    $("#prepayment_method").text('Pay With Bitcoins');
+    $('#prepayment_processor').val('bitcoin');
+    $('#prepayment_form').attr('onsubmit', bitcoin_links['monthly']);
+    showPrepaymentForm();
+    $('#checkoutModalCC').modal('show');
+  });
+</script>
+
+      <div class="payment-method" id='bitpay_form_monthly' >
+  <a href="#" class="buy_link" title="Pay with BitPay">
+    <img src='https://www.privateinternetaccess.com/assets/btn_bitpay-b66e736befea3fefd92533219a4f161de3d8812493951c2d55c57eda9217dd15.png' alt='BitPay Button' width='400' height='90' title='Pay with Bitpay' style='height: inherit !important;'>    <br>
+  </a>
+</div>
+
+<script>
+  $('#bitpay_form_monthly').click(function(e) {
+    e.preventDefault();
+    setActive('bitpay_form_');
+    $("#prepayment_method").text('Pay With Bitcoins');
+    $('#prepayment_processor').val('bitpay');
+    $('#prepayment_form').attr('action', bitpay_links['monthly']);
+    showPrepaymentForm();
+    $('#checkoutModalCC').modal('show');
+  });
+</script>
+
+        <div class="payment-method" id='shapeshift_form_monthly' >
+    <a href="#" class="buy_link" title="Pay with ShapeShift">
+      <img src='https://www.privateinternetaccess.com/assets/btn_shapeshift-307c09f4775e67a5931f3ccc24be9502e202417297001f7ee1640c64f89a7b63.png' alt='ShapeShift Button' width='400' height='90' title='Pay with ShapeShift' style='height: inherit !important;'>      <br>
+    </a>
+  </div>
+  <script>
+    $('#shapeshift_form_monthly').click(function(e) {
+      e.preventDefault();
+      setActive('shapeshift_form_');
+      $("#prepayment_method").text('Pay With Coins');
+      $('#prepayment_processor').val('shapeshift');
+      $('#prepayment_form').attr('onsubmit', shapeshift_links['monthly']);
+      showPrepaymentForm();
+      $('#checkoutModalCC').modal('show');
+    });
+  </script>
+
+
+
+        <div id='paymentwall_form_monthly_MINT' class='paymentwall-payment-method payment-method paymentwall-payment-method-monthly paymentwall_form_monthly'>
+  <a href="#" class="buy_link">
+    <img src="https://api.paymentwall.com/images/ps_logos/pm_mint.png" class="skip-dense" title="Pay with MINT" alt="MINT Button">
+  </a>
+</div>
+
+<script>
+  $('#paymentwall_form_monthly_MINT').click(function(e) {
+    e.preventDefault();
+    var service = 'MINT'
+    setActive('paymentwall_form_', service);
+    $("#prepayment_method").text('MINT');
+    $('#prepayment_processor').val('MINT');
+    $('#prepayment_form').attr('action', "/checkout/paymentwall/U2FsdGVkX1-PzwOxRUZiv0nrJprPCL-5s4qCdJKvd1M49n3K8yGa6MTuGSlBVjm5,qFsqa-n4H0eRmT7djd9A-nCbhAw")
+    showPrepaymentForm(true);
+    $('#checkoutModalCC').modal('show');
+  });
+</script>
+
+  </div>
+</div>
+
+    -->
+  </script>
+  <script type="text/x-template" id="biyearly-buttons">
+    <!--
+    <div style="text-align:center;font-weight:500;font-size: 18px;margin-bottom:20px;">
+      Select Payment Method
+    </div>
+    
+    <div class="checkout-methods">
+  <div class="checkout-content checkout-content-top-border text-center">
+      <div class="payment-method paypal-express" id="paypal_form_biyearly">
+  <img src='https://www.privateinternetaccess.com/assets/btn_paypal-ae8010e410b19f2b41b3d64efd83e9718d56f662a06e2780f215c9d3b8ced6a1.png' alt='PayPal Button' width='400' height='90' title='Pay with PayPal' style='height: inherit !important;'>
+  <div id="paypal-translucent-mask" class="paypal translucent-mask paypal-mask" >
+    <div class="purchase-message">
+      <i class="fa fa-spinner fa-spin"></i>
+    </div>
+  </div>
+  <div id="biyearly-paypal-disabled-mask"
+       class="paypal translucent-mask paypal-mask"
+       style="cursor: pointer;">
+  </div>
+</div>
+
+<form id="braintree_confirm_biyearly_form" class="braintree_confirm_form" action="/payments/braintree_confirm" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="IpVWfD++NnbC2el6Embi9+KsVDRptNRfIcyS7d8JxW7tqv3YbjM3fgv750KS2diolz/qChIPON/Spe+9Cpzncw==" />
+  <input type="hidden" name="payment_method_nonce" id="braintree_biyearly_nonce" value="" />
+  <input type="hidden" name="data" id="data" value="U2FsdGVkX19RrX1skT7iQOEf8u_jHtHLxxibGxaIGNwbUALVQG8E_olx54VwfFml,7TOJ5xppAhX129jWTPr9koIwUWk" />
+</form>
+<script
+  id="biyearly-disabled-paypal-button"
+  data-content="<p> <span class='closebtn'></span> <img src='/images/popover/warning.svg'> <span class='title'>There was an error contacting PayPal</span> <br> The error might be caused by a browser extension or add-on. Contact <a href='https://www.privateinternetaccess.com/helpdesk/new-ticket' target='_blank'>Support</a> for assistance. </p>"
+  type="text/x-template">
+</script>
+<script>
+  (function() {
+    var button = new app.PayPal.Button({
+      env:   'production',
+      plan:  'biyearly',
+      price: '69.95',
+      coupon:'PIA001'
+    })
+    button.render()
+  })()
+</script>
+
+      <div
+  class="payment-method activepayment credit-card-btn"
+  id='credit_card_form_biyearly'>
+  <a
+    data-toggle="modal"
+    data-target="#checkoutModalCC"
+    class="buy_link active"
+    href="#"
+    title="Pay with Credit Card">
+    <img src='https://www.privateinternetaccess.com/assets/btn_creditcard_back_notext-a649117e551c02098145b27b363c93f7bef4f35722a235bffa5ee31e6e8f54ba.png' alt='Credit Card Payment Button' width='400' height='90' title='Pay with Credit Card' style='height: inherit !important;'>  </a>
+</div>
+
+<script>
+  (function() {
+    var button = document.querySelector("#credit_card_form_biyearly")
+    button.addEventListener("click", function(event) {
+      event.preventDefault()
+      var prepaymentForm = document.querySelector("#prepayment_form")
+      var creditcardForm = document.querySelector("#payment-form")
+      prepaymentForm.style.cssText = "display: none;"
+      creditcardForm.style.cssText = "display: block;"
+    })
+  })();
+  (function() {
+    if(!window.__creditcardform) {
+      window.__creditcardform = new app.CreditCard.Form(document)
+      window.__creditcardform.init()
+    }
+    var form = window.__creditcardform
+    if(form.hasCheckoutCookie) {
+      window.CKOConfig = form.checkoututil.config
+      form.setProcessor("checkout")
+    } else {
+      form.stripeutil.setAPIKey()
+      form.setProcessor("stripe")
+    }
+    form.$submitBtn.removeAttr('disabled')
+  })()
+</script>
+
+      <div class="payment-method" id="amazon_form_biyearly" style="">
+  <a id="biyearly-amazon-buy-button" class="buy_link" title="Pay with Amazon Pay">
+    <div id='amazon_button_biyearly-placeholder'>
+      <img src='https://www.privateinternetaccess.com/assets/btn_amazon-3ff94755a049cbacc1bebffac2ae860d5558fda924ac955fef4c164a1a914705.png' alt='Amazon Pay Button' width='400' height='90' title='Pay with Amazon Pay' style='height: inherit !important;'>    </div>
+    <div id='amazon_button_biyearly' class='amazonbtn' style='display: none;'>
+    </div>
+  </a>
+  <div id="amazon-translucent-mask" class="amazon translucent-mask amazon-mask" >
+    <div class="purchase-message">
+      <i class="fa fa-spinner fa-spin"></i>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    var button = new app.Amazon.Button({
+      buttonID: "amazon_button_biyearly",
+      callbackurl: "/payments/amazon_checkout/U2FsdGVkX18FNvBqeskvlb7HqsSVV8RVm2YynW7XxFoWIUyJKfvQEVHYzxTwp6k0vQ6M4zeEwEQ9ODsxPuodCCrJ74Nxso5mrvLienaXLhc,nMeCNYrAzGIiVhruwXIzsz-IL_4"
+    })
+    button.render()
+  })()
+</script>
+
+      <div class="payment-method" id='bitcoin_cash_form_biyearly' >
+  <a href="#" class="buy_link" title="Pay with Bitcoin Cash">
+    <img src='https://www.privateinternetaccess.com/assets/btn_bitcoin_cash-ea419d96be6748f4fba60bc9db7b2989a81f0a7a85d32650e0d35b5abf7fc519.png' alt='Bitcoin Cash Button' width='400' height='90' title='Pay with Bitcoin Cash' style='height: inherit !important;'>    <br>
+  </a>
+</div>
+<script>
+  $('#bitcoin_cash_form_biyearly').click(function(e) {
+    e.preventDefault();
+    setActive('bitcoin_cash_form_');
+    $("#prepayment_method").text('Pay With Bitcoin Cash');
+    $('#prepayment_processor').val('bitcoin_cash');
+    $('#prepayment_form').attr('onsubmit', bitcoin_cash_links['biyearly']);
+    showPrepaymentForm();
+    $('#checkoutModalCC').modal('show');
+  });
+</script>
+
+      <div class="payment-method" id='bitcoin_form_biyearly' >
+  <a href="#" class="buy_link" title="Pay with Bitcoin">
+    <img src='https://www.privateinternetaccess.com/assets/btn_bitcoin-3f0329bd7ef5447d591948cc9c4ef624b5c16061701ff5a88df1e2114f20a451.png' alt='Bitcoin Button' width='400' height='90' title='Pay with Bitcoin' style='height: inherit !important;'>    <br>
+  </a>
+</div>
+<script>
+  $('#bitcoin_form_biyearly').click(function(e) {
+    e.preventDefault();
+    setActive('bitcoin_form_');
+    $("#prepayment_method").text('Pay With Bitcoins');
+    $('#prepayment_processor').val('bitcoin');
+    $('#prepayment_form').attr('onsubmit', bitcoin_links['biyearly']);
+    showPrepaymentForm();
+    $('#checkoutModalCC').modal('show');
+  });
+</script>
+
+      <div class="payment-method" id='bitpay_form_biyearly' >
+  <a href="#" class="buy_link" title="Pay with BitPay">
+    <img src='https://www.privateinternetaccess.com/assets/btn_bitpay-b66e736befea3fefd92533219a4f161de3d8812493951c2d55c57eda9217dd15.png' alt='BitPay Button' width='400' height='90' title='Pay with Bitpay' style='height: inherit !important;'>    <br>
+  </a>
+</div>
+
+<script>
+  $('#bitpay_form_biyearly').click(function(e) {
+    e.preventDefault();
+    setActive('bitpay_form_');
+    $("#prepayment_method").text('Pay With Bitcoins');
+    $('#prepayment_processor').val('bitpay');
+    $('#prepayment_form').attr('action', bitpay_links['biyearly']);
+    showPrepaymentForm();
+    $('#checkoutModalCC').modal('show');
+  });
+</script>
+
+        <div class="payment-method" id='shapeshift_form_biyearly' >
+    <a href="#" class="buy_link" title="Pay with ShapeShift">
+      <img src='https://www.privateinternetaccess.com/assets/btn_shapeshift-307c09f4775e67a5931f3ccc24be9502e202417297001f7ee1640c64f89a7b63.png' alt='ShapeShift Button' width='400' height='90' title='Pay with ShapeShift' style='height: inherit !important;'>      <br>
+    </a>
+  </div>
+  <script>
+    $('#shapeshift_form_biyearly').click(function(e) {
+      e.preventDefault();
+      setActive('shapeshift_form_');
+      $("#prepayment_method").text('Pay With Coins');
+      $('#prepayment_processor').val('shapeshift');
+      $('#prepayment_form').attr('onsubmit', shapeshift_links['biyearly']);
+      showPrepaymentForm();
+      $('#checkoutModalCC').modal('show');
+    });
+  </script>
+
+
+
+        <div id='paymentwall_form_biyearly_MINT' class='paymentwall-payment-method payment-method paymentwall-payment-method-biyearly paymentwall_form_biyearly'>
+  <a href="#" class="buy_link">
+    <img src="https://api.paymentwall.com/images/ps_logos/pm_mint.png" class="skip-dense" title="Pay with MINT" alt="MINT Button">
+  </a>
+</div>
+
+<script>
+  $('#paymentwall_form_biyearly_MINT').click(function(e) {
+    e.preventDefault();
+    var service = 'MINT'
+    setActive('paymentwall_form_', service);
+    $("#prepayment_method").text('MINT');
+    $('#prepayment_processor').val('MINT');
+    $('#prepayment_form').attr('action', "/checkout/paymentwall/U2FsdGVkX19A1mViio5McCcuVnP4hXE8JY4HsA1gsq4B9I1_yG8x0uM6Gox58uKq,DiI9IN8jCdsjy-cc_iuQOyed5wk")
+    showPrepaymentForm(true);
+    $('#checkoutModalCC').modal('show');
+  });
+</script>
+
+  </div>
+</div>
+
+    -->
+  </script>
+  <script type="text/x-template" id="yearly-buttons">
+    <!--
+    <div style="text-align:center;font-weight:500;font-size: 18px;margin-bottom:20px;">
+      Select Payment Method
+    </div>
+    
+    <div class="checkout-methods">
+  <div class="checkout-content checkout-content-top-border text-center">
+      <div class="payment-method paypal-express" id="paypal_form_yearly">
+  <img src='https://www.privateinternetaccess.com/assets/btn_paypal-ae8010e410b19f2b41b3d64efd83e9718d56f662a06e2780f215c9d3b8ced6a1.png' alt='PayPal Button' width='400' height='90' title='Pay with PayPal' style='height: inherit !important;'>
+  <div id="paypal-translucent-mask" class="paypal translucent-mask paypal-mask" >
+    <div class="purchase-message">
+      <i class="fa fa-spinner fa-spin"></i>
+    </div>
+  </div>
+  <div id="yearly-paypal-disabled-mask"
+       class="paypal translucent-mask paypal-mask"
+       style="cursor: pointer;">
+  </div>
+</div>
+
+<form id="braintree_confirm_yearly_form" class="braintree_confirm_form" action="/payments/braintree_confirm" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="XQK/aAtDNoEwODNYxf6H9crFYKeMvSOCHSjRASVXOMKSPRTMWs43ifkaPWBFQb2qv1bemfcGzwLuQaxR8MIa3w==" />
+  <input type="hidden" name="payment_method_nonce" id="braintree_yearly_nonce" value="" />
+  <input type="hidden" name="data" id="data" value="U2FsdGVkX19M3V8VeqBK4jPq_7XVPICi4e-I_H6ZCZI_j82xb_Uk02FREVzvhppR,m1UlLfChJktwLYnodQxbWS4uiss" />
+</form>
+<script
+  id="yearly-disabled-paypal-button"
+  data-content="<p> <span class='closebtn'></span> <img src='/images/popover/warning.svg'> <span class='title'>There was an error contacting PayPal</span> <br> The error might be caused by a browser extension or add-on. Contact <a href='https://www.privateinternetaccess.com/helpdesk/new-ticket' target='_blank'>Support</a> for assistance. </p>"
+  type="text/x-template">
+</script>
+<script>
+  (function() {
+    var button = new app.PayPal.Button({
+      env:   'production',
+      plan:  'yearly',
+      price: '39.95',
+      coupon:'PIA001'
+    })
+    button.render()
+  })()
+</script>
+
+      <div
+  class="payment-method activepayment credit-card-btn"
+  id='credit_card_form_yearly'>
+  <a
+    data-toggle="modal"
+    data-target="#checkoutModalCC"
+    class="buy_link active"
+    href="#"
+    title="Pay with Credit Card">
+    <img src='https://www.privateinternetaccess.com/assets/btn_creditcard_back_notext-a649117e551c02098145b27b363c93f7bef4f35722a235bffa5ee31e6e8f54ba.png' alt='Credit Card Payment Button' width='400' height='90' title='Pay with Credit Card' style='height: inherit !important;'>  </a>
+</div>
+
+<script>
+  (function() {
+    var button = document.querySelector("#credit_card_form_yearly")
+    button.addEventListener("click", function(event) {
+      event.preventDefault()
+      var prepaymentForm = document.querySelector("#prepayment_form")
+      var creditcardForm = document.querySelector("#payment-form")
+      prepaymentForm.style.cssText = "display: none;"
+      creditcardForm.style.cssText = "display: block;"
+    })
+  })();
+  (function() {
+    if(!window.__creditcardform) {
+      window.__creditcardform = new app.CreditCard.Form(document)
+      window.__creditcardform.init()
+    }
+    var form = window.__creditcardform
+    if(form.hasCheckoutCookie) {
+      window.CKOConfig = form.checkoututil.config
+      form.setProcessor("checkout")
+    } else {
+      form.stripeutil.setAPIKey()
+      form.setProcessor("stripe")
+    }
+    form.$submitBtn.removeAttr('disabled')
+  })()
+</script>
+
+      <div class="payment-method" id="amazon_form_yearly" style="">
+  <a id="yearly-amazon-buy-button" class="buy_link" title="Pay with Amazon Pay">
+    <div id='amazon_button_yearly-placeholder'>
+      <img src='https://www.privateinternetaccess.com/assets/btn_amazon-3ff94755a049cbacc1bebffac2ae860d5558fda924ac955fef4c164a1a914705.png' alt='Amazon Pay Button' width='400' height='90' title='Pay with Amazon Pay' style='height: inherit !important;'>    </div>
+    <div id='amazon_button_yearly' class='amazonbtn' style='display: none;'>
+    </div>
+  </a>
+  <div id="amazon-translucent-mask" class="amazon translucent-mask amazon-mask" >
+    <div class="purchase-message">
+      <i class="fa fa-spinner fa-spin"></i>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    var button = new app.Amazon.Button({
+      buttonID: "amazon_button_yearly",
+      callbackurl: "/payments/amazon_checkout/U2FsdGVkX1-h4VNK64XMwKcybeZ9EcbiP0MuYnrf3vs8bn1kpIaXgeJHZEdYB5H6EMJ5L4WCQ8laEgRTp20G8vYQrnST4-glL5SlDmiVAvg,4eNUYVkFWVQuCtzHjD8vseTl2hQ"
+    })
+    button.render()
+  })()
+</script>
+
+      <div class="payment-method" id='bitcoin_cash_form_yearly' >
+  <a href="#" class="buy_link" title="Pay with Bitcoin Cash">
+    <img src='https://www.privateinternetaccess.com/assets/btn_bitcoin_cash-ea419d96be6748f4fba60bc9db7b2989a81f0a7a85d32650e0d35b5abf7fc519.png' alt='Bitcoin Cash Button' width='400' height='90' title='Pay with Bitcoin Cash' style='height: inherit !important;'>    <br>
+  </a>
+</div>
+<script>
+  $('#bitcoin_cash_form_yearly').click(function(e) {
+    e.preventDefault();
+    setActive('bitcoin_cash_form_');
+    $("#prepayment_method").text('Pay With Bitcoin Cash');
+    $('#prepayment_processor').val('bitcoin_cash');
+    $('#prepayment_form').attr('onsubmit', bitcoin_cash_links['yearly']);
+    showPrepaymentForm();
+    $('#checkoutModalCC').modal('show');
+  });
+</script>
+
+      <div class="payment-method" id='bitcoin_form_yearly' >
+  <a href="#" class="buy_link" title="Pay with Bitcoin">
+    <img src='https://www.privateinternetaccess.com/assets/btn_bitcoin-3f0329bd7ef5447d591948cc9c4ef624b5c16061701ff5a88df1e2114f20a451.png' alt='Bitcoin Button' width='400' height='90' title='Pay with Bitcoin' style='height: inherit !important;'>    <br>
+  </a>
+</div>
+<script>
+  $('#bitcoin_form_yearly').click(function(e) {
+    e.preventDefault();
+    setActive('bitcoin_form_');
+    $("#prepayment_method").text('Pay With Bitcoins');
+    $('#prepayment_processor').val('bitcoin');
+    $('#prepayment_form').attr('onsubmit', bitcoin_links['yearly']);
+    showPrepaymentForm();
+    $('#checkoutModalCC').modal('show');
+  });
+</script>
+
+      <div class="payment-method" id='bitpay_form_yearly' >
+  <a href="#" class="buy_link" title="Pay with BitPay">
+    <img src='https://www.privateinternetaccess.com/assets/btn_bitpay-b66e736befea3fefd92533219a4f161de3d8812493951c2d55c57eda9217dd15.png' alt='BitPay Button' width='400' height='90' title='Pay with Bitpay' style='height: inherit !important;'>    <br>
+  </a>
+</div>
+
+<script>
+  $('#bitpay_form_yearly').click(function(e) {
+    e.preventDefault();
+    setActive('bitpay_form_');
+    $("#prepayment_method").text('Pay With Bitcoins');
+    $('#prepayment_processor').val('bitpay');
+    $('#prepayment_form').attr('action', bitpay_links['yearly']);
+    showPrepaymentForm();
+    $('#checkoutModalCC').modal('show');
+  });
+</script>
+
+        <div class="payment-method" id='shapeshift_form_yearly' >
+    <a href="#" class="buy_link" title="Pay with ShapeShift">
+      <img src='https://www.privateinternetaccess.com/assets/btn_shapeshift-307c09f4775e67a5931f3ccc24be9502e202417297001f7ee1640c64f89a7b63.png' alt='ShapeShift Button' width='400' height='90' title='Pay with ShapeShift' style='height: inherit !important;'>      <br>
+    </a>
+  </div>
+  <script>
+    $('#shapeshift_form_yearly').click(function(e) {
+      e.preventDefault();
+      setActive('shapeshift_form_');
+      $("#prepayment_method").text('Pay With Coins');
+      $('#prepayment_processor').val('shapeshift');
+      $('#prepayment_form').attr('onsubmit', shapeshift_links['yearly']);
+      showPrepaymentForm();
+      $('#checkoutModalCC').modal('show');
+    });
+  </script>
+
+
+
+        <div id='paymentwall_form_yearly_MINT' class='paymentwall-payment-method payment-method paymentwall-payment-method-yearly paymentwall_form_yearly'>
+  <a href="#" class="buy_link">
+    <img src="https://api.paymentwall.com/images/ps_logos/pm_mint.png" class="skip-dense" title="Pay with MINT" alt="MINT Button">
+  </a>
+</div>
+
+<script>
+  $('#paymentwall_form_yearly_MINT').click(function(e) {
+    e.preventDefault();
+    var service = 'MINT'
+    setActive('paymentwall_form_', service);
+    $("#prepayment_method").text('MINT');
+    $('#prepayment_processor').val('MINT');
+    $('#prepayment_form').attr('action', "/checkout/paymentwall/U2FsdGVkX18bTsyI0QWUzOmH1pHXcfdfzSJJDXe8x1-L_Wi7jGVRNi2sqjh9SW2z,yf-dX4zTM1ej00DmGIB3JFqzvVo")
+    showPrepaymentForm(true);
+    $('#checkoutModalCC').modal('show');
+  });
+</script>
+
+  </div>
+</div>
+
+    -->
+  </script>
+
+<script type="text/x-template" id="stylesheets">
+  <!--
+  <link rel="stylesheet" media="screen" href="https://www.privateinternetaccess.com/assets/pages/buy-vpn/modal/manifest-d40f92f699f8ed5b2256fa1d451a59432513492a00b3c48d6af76c152142a85a.css" />
+  
+  -->
+</script>
+
+<script type="text/x-template" id="modalscripts">
+  <!--
+  <script>
+    var counter = 0,
+        scripts = [
+          "https://static-na.payments-amazon.com/OffAmazonPayments/us/js/Widgets.js",
+          "https://www.paypalobjects.com/api/checkout.js",
+          "https://js.braintreegateway.com/web/3.21.0/js/client.min.js",
+          "https://js.braintreegateway.com/web/3.21.0/js/paypal-checkout.min.js",
+          "https://js.stripe.com/v2/",
+          "https://cdn.checkout.com/js/checkoutkit.js",
+          "https://www.privateinternetaccess.com/packs/pages/buy-vpn/modal/init-899a7d9757f6e5fe1746.js"
+        ]
+    scripts.forEach(function(script) {
+      var e = document.createElement('script')
+      e.type = 'text/javascript'
+      e.src = script
+      e.onload = function() { counter += 1 }
+      document.head.appendChild(e)
+    })
+    var dispatcher = setInterval(function() {
+      if(counter === scripts.length) {
+        clearInterval(dispatcher)
+        $(document).trigger("showbuttons")
+      }
+    }, 500)
+  </script>
+  -->
+</script>
+
+<script type="text/x-url-list"
+        data-coin-invoice-url="https://www.privateinternetaccess.com/payments/coin_invoice/"
+        data-alt-coins-url="https://www.privateinternetaccess.com/payments/shapeshift_altcoin_selection/">
+</script>
+
+    <div class="row giftcardboxes">
+  <div class="col-sm-6">
+    <div class="redeem redeem-green text-center">
+      <div class="header" style="font-size:23px;">Redeem your Private Internet Access gift card</div>
+      <div class="redeem-actions">
+        <a rel='nofollow' class='btn btn-custom btn-green btn-bold' href='/payments/giftcard_redirect/U2FsdGVkX18bmBhxx-lWZOT1yuhoyPgkAwDK5AxoNaRo_M9LAq2R5FxuJpjTErKgJTd1F9Sd-419AYNsQIV26Q,TpjtsIJBRt3tyTgB8tlgV7EG6N8'>REDEEM GIFT CARD</a>      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="redeem redeem-orange text-center">
+      <h3 class="header">Pay anonymously with many major brand gift cards
+        <small>FULLY ANONYMOUS • INSTANT ACCESS • 100% SECURE</small>
+      </h3>
+      <p class="description">Starbucks, Walmart, Best Buy, and many more gift cards accepted</p>
+      <div class="redeem-actions">
+        <a rel='nofollow' class='btn btn-custom btn-orange btn-bold' href='/payments/paygarden_redirect/U2FsdGVkX18pXLRyIlfSNitjZvKd-NF_Dm8ebmM5JTjdu-1nk4x1dpb5UtHTLcCVaM0uqozoCT9mIiJ4T7e3J0lrLy-pFOSBE76kZUQN8JQ,SLPrm5pm9wZ3Y-1PO1N-uAvLrLY'>GET VPN ACCESS</a>      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<section class="section-default section-container-small" style="border: 0;">
+  <div class="container">
+    <div class="row paddingside">
+      <div class="col-sm-6">
+        <div style="font-weight: 500;margin-bottom:15px;font-size: 14px;">Compatible with all popular desktop and mobile operating systems</div>
+        <a href="https://www.privateinternetaccess.com/pages/download" title="Private Internet Access Download
+        " style='display:inline-block;color:transparent;'>
+        <div class="platform-block">
+          <div class="platform-icon osx"></div>
+          <div class="platform-icon windows"></div>
+          <div class="platform-icon linux"></div>
+          <div class="platform-icon ios"></div>
+          <div class="platform-icon android"></div>
+        </div>
+        </a>
+        <a href="https://www.privateinternetaccess.com/pages/download" title="Private Internet Access Download" style='font-size:13px;display:table;margin-top:15px;color:#777;text-decoration:none;'>... and 34 others</a>
+      </div>
+      <div class="col-sm-6 pushdownonmobile paymentblock">
+        <div style="font-weight: 500;margin-bottom:5px;font-size: 14px;">We accept all kinds of payment methods</div>
+        <div class="payments payments-body">
+          <div class="payments-icon icon-paypal"></div>
+          <div class="payments-icon icon-visa"></div>
+          <div class="payments-icon icon-mastercard"></div>
+          <div class="payments-icon icon-amex"></div>
+          <div class="payments-icon icon-discover"></div>
+          <div class="payments-icon icon-amazon"></div>
+          <div class="payments-icon icon-bitcoin"></div>
+          <div class="payments-icon icon-paygarden"></div>
+          <div class="payments-icon icon-target"></div>
+          <div class="payments-icon icon-starbucks"></div>
+        </div>
+        <div style='font-size:13px;color:#777;'>... including all major gift cards!</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-default section-container-small" style="padding-top:20px;">
+  <div class="container">
+    <div class="text-center" style="font-size:22px;line-height: 28px;font-weight: 500;">Why Choose Us?</div>
+    <div class="advList row mg-top">
+      <div class="col-md-4 col-sm-6"><span class="checkmark-icon"></span>
+        <span class="subsStyle">Dedicated VPN Service</span>
+      </div>
+      <div class="col-md-4 col-sm-6"><span class="checkmark-icon"></span>
+        <span class="subsStyle">No Traffic or Request logs</span>
+      </div>
+      <div class="col-md-4 col-sm-6"><span class="checkmark-icon"></span>
+        <span class="subsStyle">US based corporation</span>
+      </div>
+      <div class="col-md-4 col-sm-6"><span class="checkmark-icon"></span>
+        <span class="subsStyle">Quality and reliability</span>
+      </div>
+      <div class="col-md-4 col-sm-6"><span class="checkmark-icon"></span>
+        <span class="subsStyle">Unbeatable price</span>
+      </div>
+      <div class="col-md-4 col-sm-6"><span class="checkmark-icon"></span>
+        <span class="subsStyle">Gigabit VPN port speeds</span>
+      </div>
+      <div class="col-md-4 col-sm-6"><span class="checkmark-icon"></span>
+        <span class="subsStyle">VPN service specialists</span>
+      </div>
+      <div class="col-md-4 col-sm-6"><span class="checkmark-icon"></span>
+        <span class="subsStyle">Professional support staff</span>
+      </div>
+      <div class="col-md-4 col-sm-6"><span class="checkmark-icon"></span>
+        <span class="subsStyle">SOCKS5 Proxy Included</span>
+      </div>
+      <div class="col-md-4 col-sm-6"><span class="checkmark-icon"></span>
+        <span class="subsStyle">OpenVPN, PPTP &amp; IPSEC/L2TP</span>
+      </div>
+      <div class="col-md-4 col-sm-6"><span class="checkmark-icon"></span>
+        <span class="subsStyle">Premium VPN Bandwidth</span>
+      </div>
+      <div class="col-md-4 col-sm-6"><span class="checkmark-icon"></span>
+        <span class="subsStyle">Unmetered VPN Transfer</span>
+      </div>
+      <div class="col-md-4 col-sm-6"><span class="checkmark-icon"></span>
+        <span class="subsStyle">Anonymous VPN</span>
+      </div>
+      <div class="col-md-4 col-sm-6"><span class="checkmark-icon"></span>
+        <span class="subsStyle">DD-WRT VPN Compatible</span>
+      </div>
+      <div class="col-md-4 col-sm-6"><span class="checkmark-icon"></span>
+        <span class="subsStyle">Instant activation</span>
+      </div>
+    </div>
+  </div><br>
+</section>
+
+
+<section class="customer-bg">
+  <div class="container customer-quote">
+    <div class="row">
+      <div class="col-sm-4 text-center customer-cell ">
+        <div style="max-width: 200px;" class="center-block customer-cell--trustpilot">
+          
+  <div class="tp-widget-wrapper visible">
+    <a class="profile-link" target="_blank" rel="follow" href="/pages/vpn-reviews">
+      <div id="trust-score" class="tp-widget-trustscore">Great</div>
+      <br>
+      <div class="tp-widget-stars">
+        <div id="star-container" class="star-rating clearfix star-4">
+          <div class="star-1"><img src='https://www.privateinternetaccess.com/assets/trust-pilot/star-46301f6e71ded25ade9ad5faced0bfc36dd5a76582c1ec569f31213b8d278cbe.png' alt='star' width='10' height='10' style='height: inherit !important;'></div>
+          <div class="star-2"><img src='https://www.privateinternetaccess.com/assets/trust-pilot/star-46301f6e71ded25ade9ad5faced0bfc36dd5a76582c1ec569f31213b8d278cbe.png' alt='star' width='10' height='10' style='height: inherit !important;'></div>
+          <div class="star-3"><img src='https://www.privateinternetaccess.com/assets/trust-pilot/star-46301f6e71ded25ade9ad5faced0bfc36dd5a76582c1ec569f31213b8d278cbe.png' alt='star' width='10' height='10' style='height: inherit !important;'></div>
+          <div class="star-4"><img src='https://www.privateinternetaccess.com/assets/trust-pilot/star-46301f6e71ded25ade9ad5faced0bfc36dd5a76582c1ec569f31213b8d278cbe.png' alt='star' width='10' height='10' style='height: inherit !important;'></div>
+          <div class="star-5"><img src='https://www.privateinternetaccess.com/assets/trust-pilot/star-46301f6e71ded25ade9ad5faced0bfc36dd5a76582c1ec569f31213b8d278cbe.png' alt='star' width='10' height='10' style='height: inherit !important;'></div>
+        </div>
+      </div>
+      <div id="main-copy" class="tp-widget-rating">
+        <span class="text">based on </span> <span class="tp-widget-trustscore">4450</span><span class="text"> reviews</span>
+      </div>
+      <div class="tp-widget-logo">
+        <img src='https://www.privateinternetaccess.com/assets/trust-pilot/logo-7e563db8697a88d63a9e3b04aeaee6c408e962af10d239cf7b9b6977019f4b7c.png' alt='logo' width='120' height='18' class='tp-logo' style='height: inherit !important;'>    </div>
+    </a>
+  </div>
+
+        </div>
+      </div>
+      <div class="col-sm-6 col-sm-offset-1 text-center customer-cell">
+        <div class="customer-cell--quote">
+          <span class="quote-icon"></span>
+          <p class="">&hellip;I&#39;m glad you&#39;re here and I&#39;m glad to put my money towards a great service. I wish you all the best of luck. I&#39;m looking forward to enjoying a freer internet experience.
+</p>
+          <p class="customer-name text-center">– John S.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+  </div>
+  <div class="clear"></div>
+  <div id="lightgreen_container" class="container">
+  <div id="footer" class="row">
+    <div class="col-md-8 col-sm-12">
+          <div class="row">
+    <div class="col-md-4 col-sm-4">
+      <p class="footer-heading">Why</p>
+      <ul class="nav_list clearfix">
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/hide-my-ip/" title="Hide My IP">Hide My IP</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/browse-anonymously/" title="Browse Anonymously">Browse Anonymously</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/public-wifi-security/" title="Public Wifi Security">Public Wifi Security</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/identity-protection/" title="Identity Protection">Identity Protection</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/internet-security/" title="Internet Security">Internet Security</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/iot-security/" title="Internet of Things Security">Internet of Things Security</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/prevent-data-theft/" title="Prevent Data Theft">Prevent Data Theft</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/hide-my-location/" title="Hide My Location">Hide My Location</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/faceniff-and-firesheep/" title="FaceNiff and Firesheep">FaceNiff and Firesheep</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/tor-vpn-proxy" title="Tor vs VPN vs Proxy">Tor vs VPN vs Proxy</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/free-versus-paid-vpn" title="Free vs. Paid VPN">Free vs. Paid VPN</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/united-nations-recommends-using-encryption" title="UN Recommends Encryption">UN Recommends Encryption</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/stop-internet-connection-records" title="Snooper&#39;s Charter">Snooper's Charter</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/krack" title="WiFi KRACK">WiFi KRACK</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/privacy-from-internet-service-provider-isp" title="Privacy from your ISP">Privacy from your ISP</a>
+        </li>
+
+      </ul>
+    </div>
+    <div class="col-md-4 col-sm-4">
+      <p class="footer-heading">Service</p>
+      <ul class="nav_list clearfix">
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/how-it-works/" title="How It Works">How It Works</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/buy-vpn/" title="Buy VPN">Buy VPN</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/business-vpn" title="Business VPN">Business VPN</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/vpn-encryption" title="VPN Encryption">VPN Encryption</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/downloads" title="Downloads">Downloads</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/network/" title="Network">Network</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/android-vpn-app" title="Android VPN App">Android VPN App</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/ios-vpn-app" title="iOS VPN App">iOS VPN App</a>
+        </li>
+      </ul>
+      <p class="footer-heading">Company</p>
+      <ul class="nav_list clearfix">
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/about-us/" title="About Us">About Us</a>
+        </li>
+
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/team" title="PIA Team">PIA Team</a>
+        </li>
+
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/jobs" title="Jobs">Jobs</a>
+        </li>
+
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/press" title="Press Area">Press Area</a>
+        </li>
+
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/media" title="PIA In The Media">PIA In The Media</a>
+        </li>
+
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/vpn-review-sites" title="PIA On The Web">PIA On The Web</a>
+        </li>
+
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/vpn-reviews/" title="VPN Reviews">VPN Reviews</a>
+        </li>
+
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/companies-we-sponsor" title="Companies We Support">Companies We Support</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-md-4 col-sm-4">
+      <p class="footer-heading">Resources</p>
+      <ul class="nav_list clearfix">
+        <li>
+          <a href="/pages/contact-us" title="Contact Us">Contact Us</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/helpdesk/" title="Support Portal">Support Portal</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/client-support/" title="Tutorials">Tutorials</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/blog" title="Blog">Blog</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/pia-wasp" title="Whitehat Program">Whitehat Program</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/affiliates/" title="Affiliates">Affiliates</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/sitemap.html" title="PIA Site Map">PIA Site Map</a>
+        </li>
+      </ul>
+      <p class="footer-heading">Tools</p>
+      <ul class="nav_list clearfix">
+        <li>
+          <a href="http://dnsleak.com/" title="DNS Leak Test">DNS Leak Test</a>
+        </li>
+        <li>
+          <a href="http://ipv6leak.com/" title="IPv6 Leak Test">IPv6 Leak Test</a>
+        </li>
+        <li>
+          <a href="http://emailipleak.com/" title="Email Leak Test">Email Leak Test</a>
+        </li>
+        <li>
+          <a href="https://www.privateinternetaccess.com/pages/whats-my-ip/" title="What&#39;s my IP?">What's my IP?</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+    </div>
+    <div class="col-md-4 col-sm-12" style="margin-bottom: 40px;">
+      <p class="footer-heading">About</p>
+      <p class="footer_text">
+        Private Internet Access is the leading VPN Service provider specializing in secure, encrypted VPN tunnels which create several layers of privacy and security providing you safety on the internet. Our service is backed by multiple gateways worldwide with access in 33+ countries, 53+ regions.      </p>
+
+      <p class="footer-heading">Connect with us</p>
+      <ul class="footer-social-list clearfix text-center-xs">
+        <li>
+          <a rel="noreferrer noopener" target="_blank" class="topbar__link--social facebook" style="" href="http://www.facebook.com/privateinternetaccess">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a rel="noreferrer noopener" target="_blank" class="topbar__link--social twitter" href="https://twitter.com/buyvpnservice">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a rel="noreferrer noopener" target="_blank" class="topbar__link--social gplus" href="https://plus.google.com/111348754768868439514">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a rel="noreferrer noopener" target="_blank" class="topbar__link--social linkedin" href="https://www.linkedin.com/company/private-internet-access">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a rel="noreferrer noopener" target="_blank" class="topbar__link--social reddit" href="https://www.reddit.com/r/PrivateInternetAccess/">
+            <span class="fa-stack fa-lg"><i class="fa fa-reddit fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a rel="noreferrer noopener" target="_blank" class="topbar__link--social youtube" href="https://www.youtube.com/user/vpnservice/videos">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-youtube-play fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </li>
+      </ul>
+
+      <p class="footer-heading">Payment Methods</p>
+      <div class="payments-icon icon-paypal"></div>
+      <div class="payments-icon icon-visa"></div>
+      <div class="payments-icon icon-mastercard"></div>
+      <div class="payments-icon icon-amex"></div>
+      <div class="payments-icon icon-discover"></div>
+      <div class="payments-icon icon-amazon"></div>
+      <div class="payments-icon icon-bitcoin"></div>
+      <div class="payments-icon icon-paygarden"></div>
+      <div class="payments-icon icon-target"></div>
+      <div class="payments-icon icon-starbucks"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 copyright_footer">Copyright &copy; <a rel="noopener nofollow" href="http://www.londontrustmedia.com/" title="London Trust Media, Inc." target="_blank" >London Trust Media, Inc.</a> All Rights Reserved.</div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 footer_legal">
+        <ul class="nav_list clearfix">
+          <li>
+            <a href="https://www.privateinternetaccess.com/pages/terms-of-service/" title="Terms Of Service">Terms Of Service</a>
+          </li>
+          <li>
+            <a href="https://www.privateinternetaccess.com/pages/privacy-policy/" title="Privacy Policy">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="https://www.privateinternetaccess.com/pages/privacy-policy#personal_information_we_collect" title="Cookies Policy">Cookies Policy</a>
+          </li>
+          <li>
+            <a href="https://www.privateinternetaccess.com/pages/dmca-policy" title="DMCA Policy">DMCA Policy</a>
+          </li>
+          <li>
+            <a href="https://www.privateinternetaccess.com/pages/export-control-policy" title="Export Control Policy">Export Control Policy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row footerdisclaimers">
+      <div class="col-md-12">
+         <p class="footer_text muted">
+            Map data provided by <a rel='nofollow' href='https://www.openstreetmap.org/'>OpenStreetMaps</a>.          </p>
+
+          <p class="footer_text muted">
+            PC Mag Editor’s Choice award image reprinted with permission. © 2012 Ziff Davis, Inc. All Rights Reserved.          </p>
+          <p class="footer_text muted">
+            PC Mag quote reprinted from www.pcmag.com with permission. © 2012 Ziff Davis, Inc. All Rights Reserved.          </p>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+    <script src="https://www.privateinternetaccess.com/packs/layouts/application-0b54ac31ae186b9a080c.js"></script>
+      <script>
+    window.I18n = {"buy":{"popover_there_was_an_error_contacting_paypal_html":"\u003cp\u003e \u003cspan class='closebtn'\u003e\u003c/span\u003e \u003cimg src='/images/popover/warning.svg'\u003e \u003cspan class='title'\u003eThere was an error contacting PayPal\u003c/span\u003e \u003cbr\u003e The error might be caused by a browser extension or add-on. Contact \u003ca href='%{support_url}' target='_blank'\u003eSupport\u003c/a\u003e for assistance. \u003c/p\u003e","cookies_policy":"Cookies Policy","fineprint":"¹ All amounts are shown in USD, and any discounts reflect a reduction based on the current monthly service pricing at $%{default_monthly_price} per month","fineprint2":"¹ The offer is valid for new customers only","fineprint3":"² Estimated price, actual charge may vary","fineprint4":"³ You'll be billed at once at signup, and the free extra time is a one-time promotional offer.","buy_vpn_monthly":"BUY VPN MONTHLY","month":"month","select_payment_method":"Select Payment Method","acceptance":"Signing up constitutes acceptance of the %{terms_of_service}, %{privacy_policy} and %{cookies_policy}","terms_of_service":"Terms of Service","privacy_policy":"Privacy Policy","buy_now":"BUY NOW","vpn_features":"VPN Features","secure_vpn_account":"Secure VPN Account","encrypted_wi_fi":"Encrypted WiFi","p2p_and_vo_ip_support":"P2P Support","pptp_open_l2pt":"PPTP, OpenVPN and L2TP/IPSec","devices_simultaneously":"5 devices simultaneously","block_ads":"Block ads, trackers, and malware","multiple_vpn_gatways":"Multiple VPN Gateways","unlimited_bandwidth":"Unlimited Bandwidth","socks5_proxy_included":"SOCKS5 Proxy Included","no_traffic_logs":"No traffic logs","please_enter_email":"Please enter a valid email address.","please_enter_name":"Please enter your full name.","please_enter_valid_number":"Please enter a valid credit card number.","please_choose_month":"Please choose a month.","please_choose_year":"Please choose a year.","please_enter_cvc":"Please enter a 3 or 4 digit security code.","please_enter_5digit_zipcode":"Please enter a 5-digit zip code.","please_enter_zipcode":"Please enter a zip code.","please_enter_address":"Please enter address line one.","email_match_error":"Your email addresses do not match.","sorry_cannot_process_amex":"Sorry, we cannot process AMEX payments from your location.","expired_month":"Please enter a month that has not expired.","please_wait":"Please wait.","instant_setup":"Instant Setup","easy_to_use":"Easy to use","monthly_price":"%{price} %{month}","yearly_price":"%{price} %{year}","year":"year","sixmonthly_price":"%{price} %{sixmonths}","quarterly_price":"%{price} %{quarterly}","buy_vpn_quarterly":"BUY VPN 3 MONTHS","biyearly_price":"%{price} %{two_years}","two_years":"2 Years","three_years":"3 Years","buy_vpn_biyearly":"BUY VPN 2 YEARS","buy_vpn_yearly":"Buy VPN ","sign_up_now":"SIGN UP NOW","only_per_monthly":"(Only %{price} /month)","only_per_quarterly":" %{price} per three months","only_per_sixmonthly":" %{price} per six months","only_per_yearly":" %{price} per year","only_per_biyearly":" %{price} per two years","only_per_three_years":" %{price} per three years","buy_vpn_sixmonthly":"BUY VPN 6 MONTHS","quote_lifehacker":"Committed to keeping your data private.","quote_lifehacker2":"Our readers made it abundantly clear that Private Internet Access should be your first stop for protecting your private browsing data.","quote_msnmoney":"Secure your computer's Internet connection.","quote_pcmag":"Private Internet Access out-performs and out-features the competition","redeem_pia_giftcard":"Redeem your Private Internet Access gift card","redeem_giftcard":"REDEEM GIFT CARD","pay_anonymously":"Pay anonymously with many major brand gift cards","fully_anonymously":"FULLY ANONYMOUS • INSTANT ACCESS • 100% SECURE","cards_accepted":"Starbucks, Walmart, Best Buy, and many more gift cards accepted","get_vpn_access":"GET VPN ACCESS","secure_vpn":"Buy Safe and Secure VPN","peace_of_mind":"Peace of Mind","buy_safe_and_secure_vpn":"Buy Safe and Secure VPN","from_only":"From only %{price} per month","watch_the_video":"(Watch the Video)","as_seen_in":"Trusted By Companies Including","proud_sponsor_of":"Proud Sponsor Of","privileges_vpn":"Privileges VPN","north_american_support":"24/7 North American VPN Support","most_anonymous_vpn":"The Most Anonymous VPN Service","highest_quality":"Highest quality for the lowest price.  Period.","worldwide_coverage":"Worldwide coverage with %{total_country_count}+ countries","massive_network":"Massive network with %{total_server_count}+ gateways","easy_to_use_custom_vpn_software":"Easy to use custom VPN software","gbps_network":"Private Internet Access® %{total_bandwidth_count_gbps} Gbps+ Network","no_logging":"No logging. Period.","why_vpn":"WHY YOU SHOULD USE PIA","online_security":"Online security","encrypt_traffic":"Encrypt all of your internet\u003cbr\u003etraffic and use a safe, protected IP.","identity_protection":"Identity Protection","protect_your_identity":"Protect your identity with an\u003cbr\u003eanonymous VPN IP.","anonymity":"Anonymity","buy_vpn_to_blend":"Use PIA to blend in with the\u003cbr\u003ecrowd.","stop_eavesdroppers":"Stop Eavesdroppers","encryption_keeps_you_safe":"Encryption keeps you safe,\u003cbr\u003eeven on public Wifi.","unblock_websites":"Unblock Websites","geographic_restrictions":"Say goodbye to geographic\u003cbr\u003erestrictions. Travel worry free\u003cbr\u003ewith PIA.","uncensored_access":"Uncensored Access","complete_uncensored_access":"Complete uncensored access\u003cbr\u003eto the true internet. Finally.","pia_easy_to_use":"Private Internet Access Comes with Easy to Use Software","simple_vpn_client":"Simple VPN Client","one_click_vpn_connect":"One click VPN connect","advanced":"Advanced","port_forwarding":"Port Forwarding %{advanced}","dns_leak_protection":"DNS Leak Protection %{advanced}","disconnect_protection":"Disconnect Protection %{advanced}","detect_best_server":"Detect Best Server","alternate_configurations":"Alternate Configurations %{advanced}","secure_openvpn":"Secure OpenVPN","get_started_now":"GET STARTED NOW","for_all_features":"For all VPN features","cost_per_month_biyearly":"*  Cost per month with biyearly subscription.","choose_payment_method":"Choose a Payment Method","title":"Register for Anonymous VPN Services | PIA Services","meta_description":"Buy a VPN account from a reputable provider. Buy VPN tunnel services for strong encryption and privacy. VPN account gateways powered by Gigabit Ethernet","content_language":"en-us","lang":"en","credit_card_update":"Credit Card Update","update_card_details_on_file":"Update your card details on file with us","double_charge_prevention_error":"Your credit card update has been prevented to avoid double charging. Please try again in a couple of hours.","problem_updating_card_details":"There was a problem with the card details you provided","account_already_cancelled":"Your account seems to already be cancelled","card_details_update_successfully":"Your card details were updated successfully. Any failed charges will be retried.","updated_less_than_15_days":"Credit card details updated less than 15 days ago","update":"Update","credit_card_signup":"Credit Card Signup","back_credit_card_signup":"Back to Credit Card Signup","pay_with_bitcoin":"Pay With Bitcoins","pay_with_bitcoin_cash":"Pay With Bitcoin Cash","pay_with_zcash":"Pay With Zcash","pay_with_altcoins":"Pay With Coins","pay_with_coin":"Pay With %{coin}","pay_with_libert_reserve":"Pay With Liberty Reserve","pay_with_cashu":"Pay With CashU","pay_with_okpay":"Pay With OKPay","signing_up":"You are signing up for a payment of ","username_alert":{"same_account_html":"You're purchasing a new subscription for account \u003cstrong\u003e%{username}\u003c/strong\u003e. Please, %{sign_out_link} if you'd like to purchase a new account instead.","new_account_html":"You're logged in as \u003cstrong\u003e%{username}\u003c/strong\u003e and your subscription is \u003cstrong\u003eactive\u003c/strong\u003e. By continuing, you'll purchase a new account.","from_trial_html":{"one":"Hi, \u003cstrong\u003e%{username}\u003c/strong\u003e! After making a purchase, the remaining day on your current subscription will be transferred to your new subscription.","other":"Hi, \u003cstrong\u003e%{username}\u003c/strong\u003e! After making a purchase, the remaining \u003cstrong\u003e%{count}\u003c/strong\u003e days on your current subscription will be transferred to your new subscription."}},"email":"Email","confirm_email":"Confirm Email","name_on_card":"Name on Card","card_number":"Card Number","expiration":"Expiration ","expiration_date_format":"(MM/YYYY)","cvc":"CVC","billing_address":"Billing Address","address_2":"Address 2","city":"City","state":"State","zip":"Zip","country":"Country","pay_now":"Pay Now","money_back":"7 day money back guarantee","features":"Features of PIA","best_value":"BEST VALUE","yearly":"Yearly","extension_discount_html":"%{duration} Free\u003csup style='font-size: 0.6em'\u003e3\u003c/sup\u003e +","extension_discount_sub_html":"%{duration} free\u003csup style='font-size: 0.6em'\u003e3\u003c/sup\u003e +","buy_12_months":"BUY 12 MONTHS","monthly":"Monthly","monthly_price_title":"Monthly","quarterly_price_title":"3 Months","sixmonthly_price_title":"6 Months","yearly_price_title":"Yearly","biyearly_price_title":"Two Years","three_years_price_title":"Three Years","five_years_price_title":"Five Years","buy_1_month":"BUY 1 MONTH","buy_3_months":"BUY 3 MONTHS","buy_6_months":"BUY 6 MONTHS","buy_24_months":"BUY 24 MONTHS","buy_36_months":"BUY 36 MONTHS","buy_60_months":"BUY 60 MONTHS","state_of_art_network":"Private Internet Access VPN Service is powered by a state of the art, tier-1 multi-gigabit private network.","signup_to_protect_privacy":"Signup for our VPN service to protect your privacy and confidentiality with a hidden IP address and encrypted traffic.","email_placeholder":"Type your email address","email_error":"Email address is invalid.","shapeshift_refund_address":"Refund address","shapeshift_refund_address_error":"Refund address is invalid.","shapeshift_refund_address_tooltip":"The refund address should be an address controlled by you where we will refund your deposit in the event of a failed transaction.","shapeshift_refund_address_placeholder":"Type a refund address","shapeshift_proceed_to_payment":"Proceed to payment","confirm_email_placeholder":"Type your email address","navigate_away":"YOU ARE ABOUT TO NAVIGATE AWAY FROM THE PRIVATE INTERNET ACCESS WEBSITE. The privacy policy of Private Internet Access is separate from that of the website you are navigating to and may ask for different or additional information from you. Please review the disclosure on the third-party website for detailed information regarding their privacy policy. If you do not agree with the Privacy Policy on the third-party’s website, you may return to the original payment page.","access_to_apps":"A subscription to Private Internet Access includes full access to our network through VPN apps and clients (compatible across devices).","multiaccount":"For bulk purchase inquiries, please reach out to"}};
+    var prices = {"monthly":"6.95","biyearly":"69.95","yearly":"39.95"};
+
+    var bitpay_links = {};
+    var bitcoin_cash_links = {};
+    var bitcoin_links = {};
+    var zcash_links = {};
+    var shapeshift_links = {};
+    var cashu_links = {};
+    var okpay_links = {};
+
+      bitpay_links['monthly'] = "/payments/bitpay_redirect/U2FsdGVkX19ofRQSB6ZlyWl44TefG4jI00tIZVGBOPzxDvNV8963OOq4hiyry47o,cfcC0phZ5qQX7t1Ur7W8pK0R-uo";
+      bitcoin_cash_links['monthly'] = 'createCoinInvoice(event, "/payments/coin_redirect/BCH/U2FsdGVkX1-JewnOs_CSn2B3FphnPIR_9_syBuEdzB1FYw2jLq3-yaG5mcWSh5YU,bY0diYM1wxpovuyzeq054tgOf_c");';
+      zcash_links['monthly'] = 'createCoinInvoice(event, "/payments/coin_redirect/ZEC/U2FsdGVkX1-0ld-ZFzlSBPLH2v8op7C6RPYD1YPN6mz789qk8OhMp_uVDrklEATv,f0p1KSDOIhN6LOTaSCuvwwzja8o");';
+      bitcoin_links['monthly'] = 'createCoinInvoice(event, "/payments/coin_redirect/BTC/U2FsdGVkX1_dJJPggyP5JzYfx6WSGu2YzNh5qMSKQLJ1lMceP_SwQQwi6jV5_lkG,OblaJlsaDwaKuA-lyn9hzbUUlsw");';
+      shapeshift_links['monthly'] = 'createCoinInvoice(event, "/payments/shapeshift_redirect/U2FsdGVkX18PLN9U7bKkQrvSFP7HHu9AxRqFKmeZuvNercbtC24J6yf2ZMvB9-IZ,YY20V7n49KB7CMIkB75LcGut3Hw");';
+      cashu_links['monthly'] = "/payments/cashu_redirect/U2FsdGVkX1_1J_KcrOtgV8j2zKuk4hThUNuZBkqZqP45BzA1_Eo4huESAvLHy3Th,7iBD0Jrd4yxMeAePoJvzLllNje0";
+      okpay_links['monthly'] = "/payments/okpay_redirect/U2FsdGVkX1_iAp8O28XQVIO8mvP_2P_k9VevJKafyuYvXSdguyROtukIfQglDbLO,BCjmDM7SxkrZ7luc_UFZwmZhppw";
+      bitpay_links['biyearly'] = "/payments/bitpay_redirect/U2FsdGVkX1-leM8Qq_WKMZcgYjFZ_4W7Ws2g-M6o2F0MhFkeMcZvLOBaSAO6scvn,G4kRja2uhV6LSdphsF1Ie0JGNzA";
+      bitcoin_cash_links['biyearly'] = 'createCoinInvoice(event, "/payments/coin_redirect/BCH/U2FsdGVkX18ZYCGAlAhxrwtIBGm8BvYNdUH0vDMuay4ZcixxespL7MN05eXUgOzk,QzlrVCDT2vigs9wDm_OZ8kYzBZs");';
+      zcash_links['biyearly'] = 'createCoinInvoice(event, "/payments/coin_redirect/ZEC/U2FsdGVkX18GCduHDTdbKEt3MCbRacOmNTD-Ku2jZs0YaJEyYPHu9rgc2FQZiwJK,oDCGVBpiQtJ-kjKmg1uaW0pia2s");';
+      bitcoin_links['biyearly'] = 'createCoinInvoice(event, "/payments/coin_redirect/BTC/U2FsdGVkX1-kBZa-D8yskgfujuvqZBcvd8qqzC6ze_RNNElyhX08zNDsclIF8FNB,A5cZvRJk4XVeuea7KRfEtYMaVYk");';
+      shapeshift_links['biyearly'] = 'createCoinInvoice(event, "/payments/shapeshift_redirect/U2FsdGVkX19gpOJ4Wtt6YcDND6F-B2WzFDx6nav6mRZ-PGoogL7EN1RosR9wXLKp,yY07vJSch3JmkwnAUUGacrB8Chs");';
+      cashu_links['biyearly'] = "/payments/cashu_redirect/U2FsdGVkX1_7zcOBmDxtOImDX60eXZiqP6djnEms6Ob0zfVcpCTIIT-VemxOJc38,-_LlwX8wIERKICqRFLJmUSIM0ZY";
+      okpay_links['biyearly'] = "/payments/okpay_redirect/U2FsdGVkX19HVi8MzcQDoxDfSzax_-FkkNBsqjSxRuS43snrmZNmaQF5YAs2vhKt,nHWG_F8c-lwd3gwvKHbu-ykvGBQ";
+      bitpay_links['yearly'] = "/payments/bitpay_redirect/U2FsdGVkX1-S4JDP634rd-TlubqrnFGHjF3CppOhWJoN-XsWaLwHfSjIGSc0yT7F,fHod-cFCcKt4bVrm-teQ2b9NQvU";
+      bitcoin_cash_links['yearly'] = 'createCoinInvoice(event, "/payments/coin_redirect/BCH/U2FsdGVkX18HHqQ--uCPPmcMx1Ocfw_e5IMl82NXBm8sCOVlKRstsOEBa3pEblX7,EKnbq3oRn-W7hcpZc4TPn6mOCSs");';
+      zcash_links['yearly'] = 'createCoinInvoice(event, "/payments/coin_redirect/ZEC/U2FsdGVkX18zdWlXoRTFwp0Q9Lbwrh-Rj-1et1Iv88t7vJs_r27F5KohEJvJUxWi,4ZMau20615wykN3DwERTRp1iMX0");';
+      bitcoin_links['yearly'] = 'createCoinInvoice(event, "/payments/coin_redirect/BTC/U2FsdGVkX1-FGqQTqOeOd1ypnt5KyVxFEWcytqrwqCHzACaDcYSamBZwD8u_UxvR,CNBM9FJ1bOZpgI7KoyX4qLINvGo");';
+      shapeshift_links['yearly'] = 'createCoinInvoice(event, "/payments/shapeshift_redirect/U2FsdGVkX1_8sQGoJQwSrCUGqHzy6hU_wjhOHghRgox2w4ZAjZ5DDloloLUxqQdW,Y_qTNURMk8LeI6TblfCwOFp0HFQ");';
+      cashu_links['yearly'] = "/payments/cashu_redirect/U2FsdGVkX1-M2X6YUdvOTiod4lj9LoqEn_sdPu_heKShip-InITJxlqa6gh3PDX9,6Gye6mB-vqQcd7ni12Rz432B5PI";
+      okpay_links['yearly'] = "/payments/okpay_redirect/U2FsdGVkX19yGrbgEN7ndIcG8FWuxkoNYAGZH39-y6vk9vtsh_XKxhSQ_c7AGvEg,4eN0N-tO0fMfROeX19xCFDgA2TQ";
+  </script>
+  <script>
+    function setupPayments(plan, price) {
+      current_plan = plan;
+      current_price = price;
+      var plans = ["monthly","biyearly","yearly"];
+      var processors = ["paypal","credit_card","amazon","bitcoin_cash","bitcoin","bitpay","cashu","okpay","shapeshift"];
+      $.each(plans, function(_i, value) {
+        $('#terms_' + value).hide();
+        $('#prepayment_terms_' + value).hide();
+        $.each(processors, function(_j, processor) {
+          $('#' + processor + '_form_' + value).hide();
+        });
+        $('.paymentwall-payment-method').hide();
+      });
+      $.each(processors, function(_j, processor) {
+        $('#terms_' + plan).show();
+        $('#prepayment_terms_' + plan).show();
+        $('#' + processor + '_form_' + plan).show();
+          $('.paymentwall-payment-method-' + plan).show();
+      });
+
+      switch($('#prepayment_processor').val()) {
+        case 'bitpay':
+          $('#prepayment_form').attr('action', bitpay_links[plan]);
+          break;
+        case 'cashu':
+          $('#prepayment_form').attr('action', cashu_links[plan]);
+          break;
+        case 'okpay':
+          $('#prepayment_form').attr('action', okpay_links[plan]);
+          break;
+      }
+      $("#navigate-away").hide();
+    }
+  </script>
+  <script>
+    $('#buy_vpn_signup_monthly').attr('href',null);
+    $('#buy_vpn_signup_monthly').click(function (e) {
+      $('#cc_payment_plan').val('6.95');
+      $('#cc_payment_details').val('U2FsdGVkX1-45ktLmhyj0biYzP7VgIC-WMQ8ynmvjnI,B9bIEGP8Cy2WVSa6ipWQcyDxW7g');
+      setupPayments('monthly', '6.95');
+      e.preventDefault();
+    });
+  </script>
+  <script>
+    $('#buy_vpn_signup_biyearly').attr('href',null);
+    $('#buy_vpn_signup_biyearly').click(function (e) {
+      $('#cc_payment_plan').val('69.95');
+      $('#cc_payment_details').val('U2FsdGVkX18YCaYY0KfFGdyCKFlx4aL2EuZXPBkNC7A,q6WXQBiE4vVGXzTpHWZ7hHLhgqE');
+      setupPayments('biyearly', '69.95');
+      e.preventDefault();
+    });
+  </script>
+  <script>
+    $('#buy_vpn_signup_yearly').attr('href',null);
+    $('#buy_vpn_signup_yearly').click(function (e) {
+      $('#cc_payment_plan').val('39.95');
+      $('#cc_payment_details').val('U2FsdGVkX18HioEAC2ZbOYCB8wR-eNSxOi3OH47p79I,R9NQRBcvf7YOig8sM4itviFtwOc');
+      setupPayments('yearly', '39.95');
+      e.preventDefault();
+    });
+  </script>
+  <script id="credit-card-form-i18n" type="application/json">
+    {"pay_now":"Pay Now","please_wait":"Please wait."}
+  </script>
+
+  <script type="text/javascript" charset="utf-8">
+     $(function () { $('[data-toggle="popover"]').popover({title: '', trigger: 'hover'}) })
+      var ccCvcContent = $('<p>For Visa, Mastercard, and Discover (left), the 3 digits on the back of your card.</p>' +
+          '<p>For American Express (right), the 4 digits on the front of your card.</p>' +
+          '<div class="cvc-preview-container two-card"><div class="amex-cvc-preview"></div><div class="visa-mc-dis-cvc-preview"></div></div>');
+      $('#cc-cvc-help').popover({
+        trigger: 'hover',
+        html: true,
+        content: ccCvcContent,
+        placement: 'top'
+      })
+  </script>
+<script>
+  $(document).ready(function() {
+    $("#PrePayButton").addClass("disabled");
+    $("#navigate-away").hide();
+
+    var url = window.location.hash.substring(1);
+    if (url.startsWith('/payments/coin_invoice/')) {
+      showCoinInvoice(url);
+    }
+
+    if (url.startsWith('/payments/shapeshift_altcoin_selection/')) {
+      showShapeshiftAltcoinSelection(url);
+    }
+  });
+  function showPrepaymentForm(showWarning){
+    $("#payment-form").hide();
+      $("#prepayment_form").show();
+      $("#navigate-away").hide();
+      if (showWarning) {
+        $("#navigate-away").show();
+      }
+    $("#prepayment_form").validator()
+  }
+  function showShapeshiftAltcoinSelection(url) {
+    $(".shapeshiftaltcoinselection").load(url, function(){
+      $("#shapeshiftaltcoinselectionModal").modal('show');
+    });
+  }
+  function showCoinInvoice(url) {
+    $(".coininvoice").load(url, function(){
+      $("#coininvoiceModal").modal('show');
+      setInterval(function() { $(".coininvoice").load(url); }, 10000);
+    });
+  }
+  function createCoinInvoice(evt, url, data) {
+    evt.preventDefault();
+    if (typeof(data) === 'undefined') {
+      data = $("#prepayment_form").serialize();
+    }
+    $.get(url, data, function(res) {
+      if (res.status == 'ok') {
+        $('#checkoutModalCC').modal('hide');
+        window.location.hash = res.url;
+        window.location.reload();
+      } else {
+        var d = $('#flash-' + res.status);
+        if (!d.size()) {
+          d = $('<div id="flash-' + res.status + '"></div>');
+          $(document.body).append(d);
+        }
+        $(d).html('<center>' + res.message + '</center>');
+        $(d).dialog({
+          title: res.title,
+          width: $('#em_calc').width() * 50,
+          close: function() {
+            $('#checkoutModalCC').modal('hide');
+          }
+        }).parent().css('z-index', parseInt($('.modal-backdrop').css('z-index')) + 10);
+      }
+    }, 'json');
+    return false;
+  }
+  function setActive(target, to_append){
+    $('.activepayment').removeClass('activepayment');
+    var plans = ["monthly","biyearly","yearly"];
+    $.each(plans, function(_i, value) {
+      var selector = '#' + target + value;
+      if(to_append && to_append.length > 0) {
+        selector = selector + '_' + to_append;
+      }
+      $(selector).addClass('activepayment');
+    });
+  }
+</script>
+  <script src="https://www.privateinternetaccess.com/packs/pages/buy-vpn-aaca48681bfca063cbc6.js"></script>
+  <script type="text/javascript">
+   $('.welcome_video').mouseover(function() {
+     $(this).css('cursor','pointer');
+   });
+   $('.welcome_video').click(function() {
+     $("html, body").animate({ scrollTop: 0 }, "slow");
+     $('.buy_vpn_video_container-video-bg').fadeIn('slow', function() {
+       $('.buy_vpn_video_container-video-frame').show('fast', function() {
+         $('.buy_vpn_video_container-video-frame').html("<div class='buy_vpn_video_container-video-frame-screen'><iframe width='100%' height='480' src='https://www.youtube-nocookie.com/embed/SuD7aZQ4aq4?rel=0&autoplay=1' frameborder='0' allowfullscreen></iframe><br><br>[x] click anywhere to close</div>").css('max-width', '100%');
+       });
+     });
+   });
+   $('.buy_vpn_video_container-video-frame').click(function() {
+     $('.buy_vpn_video_container-video-frame').hide('fast');
+     $('.buy_vpn_video_container-video-frame').html("");
+     $('.buy_vpn_video_container-video-bg').fadeOut('slow',function() {
+     });
+   });
+   $('.buy_vpn_video_container-video-frame').mouseover(function() {
+     $(this).css('cursor','pointer');
+   });
+  </script>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2GKQF5"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <script id="accept-lang-template" type="text/x-mustache" data-href="https:&#x2F;&#x2F;www.privateinternetaccess.com">
+    We noticed your language is set to {{presentLanguage}}, would you like to view this content in <a href="{{refererHref}}">{{refererLanguage}}</a> instead?  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var node = document.querySelector('script#accept-lang-template')
+      var href = node.getAttribute('data-href')
+      var template = node.innerHTML
+      app.LocaleMiddlewareAlert({href: href, template: template})
+    })
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      // Disable scroll on mobile, when menubar is open
+      $(".offcanvas").on("show.bs.offcanvas", function () {
+        $("body").css("overflow", "hidden");
+        $("body").css("overflow-x", "hidden");
+        $("body").css("overflow-y", "hidden");
+        $("body").on("touchmove.bs", function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        });
+
+      });
+
+      // Enable scroll on mobile, when menubar is closed
+      $(".offcanvas").on("hidden.bs.offcanvas", function () {
+        $("body").css("overflow", "auto");
+        $("body").css("overflow-x", "auto");
+        $("body").css("overflow-y", "auto");
+        $("body").off("touchmove.bs");
+      });
+    });
+  </script>
+
+    <script>
+ function PIARenderRecaptcha() {
+   $(".recaptcha-field").each(function(_, e) {
+     grecaptcha.render(e, {sitekey: "6LeD4AcUAAAAAAikneoJo5fJJgwRn17jzBBeNUvM"})
+   })
+ }
+</script>
+<script src='https://www.google.com/recaptcha/api.js?onload=PIARenderRecaptcha&render=explicit' async defer></script>
+
+    <script>
+      $(document).ajaxSend(function(e, xhr, options) {
+        var token = $("meta[name='csrf-token']").attr("content");
+        xhr.setRequestHeader("X-CSRF-Token", token);
+      })
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("img[data-1x], img[data-2x], img[data-3x], img[data-4x]").dense();
+      });
+    </script>
+  </body>
+</html>
