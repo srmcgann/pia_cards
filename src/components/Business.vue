@@ -64,7 +64,7 @@ export default {
   data () {
     return {
       userZip: '',
-      backend: 'http://server/pia_cards/static/getZips.php',
+      backend: '//' + window.location.hostname + '/pia_cards/static/getZips.php',
       showForm: true,
       businessesFound: [],
       businessCount: 0,
