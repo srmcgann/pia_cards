@@ -1,11 +1,8 @@
 <template>
   <div>
-    <a href="https://www.privateinternetaccess.com/" target="_blank">
-      <img src="https://www.privateinternetaccess.com/assets/PIALogo2x-84413b002e788098871d6ecd79b23cc242b1eeb9864fc65a42d3cce7915c287f.png" class="headerLogo">
-    </a>
-    <br><br>
+    <h1 class="appHeader">PIA Cards</h1>
     <tabs>
-      <tab name="PIA Cards">
+      <tab name="About the Program">
         <Cards/>
       </tab>
       <tab name="Find a Nearby Business">
@@ -124,5 +121,10 @@ export default {
     box-shadow: 0 0 10px rgba(0, 0, 0, .05);
     padding: 4em 2em;
   }
+}
+.appHeader {
+  margin-top:-30px;
+  margin-bottom:-40px;
+  line-height: 1em;
 }
 </style>

@@ -64,7 +64,7 @@ export default {
   data () {
     return {
       userZip: '',
-      backend: 'https://jsbot.net/pia_cards/static/getZips.php',
+      backend: 'http://server/pia_cards/static/getZips.php',
       showForm: true,
       businessesFound: [],
       businessCount: 0,
@@ -173,9 +173,9 @@ td {
   text-align: left;
   margin-bottom: 35px;
   padding-bottom: 15px;
-  border-radius: 15px;
+  border-radius: 5px;
   background: #f0f8ff;
-  border: 5px solid #cde;
+  border: 1px solid #cde;
   padding:10px;
 }
 .enterZipButton {
