@@ -465,6 +465,7 @@ div.welcome_as_seen {
   let iframe = document.createElement('iframe')
   iframe.src = '//' + window.location.hostname + '/pia_cards/dist'
   iframe.style.width = '100%'
+  iframe.style.overflow = 'hidden'
   app.appendChild(iframe)
   let lastheight;
   setInterval(function(){
