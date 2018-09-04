@@ -16,6 +16,9 @@ export default {
 </script>
 
 <style>
+body {
+  overflow: hidden;
+}
 #app {
   width: 90%;
   max-width: 1000px;
