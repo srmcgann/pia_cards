@@ -1,17 +1,33 @@
 <template>
   <div class="businessDiv">
     <div v-if="showForm" class="introDiv">
-      Enter your zip code to search for<br>nearby participating businesses...<br>
-      <form @submit.prevent="lookupBusinesses">
-        <input ref="zipinput" class="zipInput" placeholder="enter zip" v-model="userZip"/>
-        <button class="enterZipButton">Go</button>
-      </form>
+      <div class="searchFormContainer">
+        <div style="float:left;">
+          <img src="../assets/robot.png" width=100 style="margin-right: 20px;"/>
+        </div>
+        <div style="float:left">
+          Enter your zip code to search for<br>nearby participating businesses...<br>
+          <form @submit.prevent="lookupBusinesses">
+            <input ref="zipinput" class="zipInput" placeholder="enter zip" v-model="userZip"/>
+            <button class="enterZipButton">Go</button>
+          </form>
+        </div>
+        <div class="clear"></div>
+      </div>
     </div>
     <div v-else-if="businessesFound.length === 0 && !zipNotFound" class="resultsDiv">
       <br><br>
-      Searching {{businessCount}} businesses for the closest to you...<br><br>
-      This might take a moment.<br>
-      <img src="../assets/hourglass.gif">
+      <div style="margin-left:auto; margin-right:auto;width: 450px; margin-top: 50px;">
+        <div style="float:left;">
+          <img src="../assets/robot.png" width=100/>
+        </div>
+        <div style="float:left">
+          Searching {{businessCount}} businesses...<br><br>
+          This might take a moment.<br>
+          <img src="../assets/hourglass.gif" width=100>
+        </div>
+        <div class="clear"></div>
+      </div>
     </div>
     <div v-else-if="zipNotFound">
       <div class="sorryCharlie">That zip wasn't found in our database.</div>
@@ -142,7 +158,8 @@ export default {
   overflow: auto;
   padding: 5px;
   background: #fff;
-  color: #000;
+  border:1px solid #aaa;
+  color: #456;
 }
 .businessDiv {
   text-align: center;
@@ -173,9 +190,7 @@ td {
   text-align: left;
   margin-bottom: 35px;
   padding-bottom: 15px;
-  border-radius: 5px;
-  background: #f0f8ff;
-  border: 1px solid #cde;
+  background: #f0f0f0;
   padding:10px;
 }
 .enterZipButton {
@@ -186,7 +201,7 @@ td {
   border-radius: 5px;
 }
 .introDiv {
-  font-size: 24px;
+  font-size: 18px;
   margin-top: 100px;
   margin-bottom: 100px;
 }
@@ -197,13 +212,13 @@ button:focus {
   outline:0;
 }
 .button {
-  font-size: 24px;
-  background: #9ef;
+  font-size: 20px;
+  background: #aed;
   border: none;
   padding: 5px;
   padding-left: 15px;
   padding-right: 15px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .sorryCharlie {
   font-size: 24px;
@@ -214,5 +229,10 @@ button:focus {
   font-size: 28px;
   width: 150px;
   text-align: center;
+}
+.searchFormContainer {
+ margin-left: auto;
+ margin-right: auto;
+ width: 470px;
 }
 </style>

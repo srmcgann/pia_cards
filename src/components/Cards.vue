@@ -11,27 +11,54 @@
       This site will let you find the nearest businesses that are already participating, or if you are a business owner, you can register your business here so people can find you!
     </div>
     <div class="clear"></div>
-    <div class="cardDivInner">
-      <img src="../assets/cardbox.jpg" class="pia_cards">
-    </div>
-    <div class="cardDivInner">
-      <img src="../assets/cardbox2.jpg" class="pia_cards">
-    </div>
-    <div class="cardDivInner">
-      <img src="../assets/cardbox3.jpg" class="pia_cards">
-    </div>
-    <div class="cardDivInner">
-      <img src="../assets/cardbox4.jpg" class="pia_cards">
+    <hr>
+    <i style="font-size: .75em">Click a thumbnail to view gallery<br></i>
+    <div class="thumbContainer">
+      <photo-gallery :images="images" v-model="visiblePhoto"></photo-gallery>
+      <a v-for="(image, index) in images" href="#" @click="visiblePhoto = index" :key='index'>
+        <img :src="image.thumbSrc" class="thumb-item"/>
+      </a>
     </div>
     <div class="clear"></div>
   </div>
 </template>
 
 <script>
+import { PhotoGallery } from 'vue-photo-gallery'
+
 export default {
   name: 'Cards',
+  components: {
+    PhotoGallery
+  },
   data () {
     return {
+      visiblePhoto: null,
+      images: []
+    }
+  },
+  mounted () {
+    let sizes = [
+      [ 800, 1422 ],
+      [ 800, 1422 ],
+      [ 800, 1231 ],
+      [ 1000, 545 ],
+      [ 800, 984 ],
+      [ 800, 1067 ],
+      [ 800, 537 ],
+      [ 800, 600 ],
+      [ 800, 1067 ],
+      [ 800, 1067 ]
+    ]
+    for (let i = 1; i <= 10; ++i) {
+      this.images.push(
+        {
+          src: require(`../assets/cardbox${i}.jpg`),
+          thumbSrc: require(`../assets/cardbox${i}_thumb.jpg`),
+          w: sizes[i - 1][0],
+          h: sizes[i - 1][1]
+        }
+      )
     }
   }
 }
@@ -57,6 +84,16 @@ export default {
 .cardsDiv {
   font-size: 20px;
   margin-top: -30px;
+}
+.thumb-item {
+  margin: 8px;
+  border-radius: 5px;
+}
+.thumbContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .clear {
   clear: both;
