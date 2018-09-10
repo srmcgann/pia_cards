@@ -2,9 +2,6 @@
   <div>
     <h1 class="appHeader">PIA Cards</h1>
     <tabs>
-      <tab name="About the Program">
-        <Cards/>
-      </tab>
       <tab name="Find a Nearby Business">
         <Business/>
       </tab>
